@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        if (savedTheme === 'dark') {
+          document.documentElement.classList.add('dark-theme');
+        }
+      })();
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kavya Agrawal | Contact</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css?v=16">
+    <script defer src="https://use.fontawesome.com/releases/v6.5.2/js/all.js"></script>
+    <script src="./assets/js/navbar-burger.js"></script>
+
+      <!-- PWA & Favicon Metadata -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#2A7EFF">
+    <script src="./assets/js/pwa.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+        <a class="navbar-item" href="./index.html">
+          <strong>Kavya Agrawal</strong>
+        </a>
+        <div role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-main">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </div>
+      </div>
+      <div id="navbar-main" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="./index.html">Home</a>
+          <a class="navbar-item" href="./about.html">About</a>
+          <a class="navbar-item" href="./experience.html">Education & Experience</a>
+          <a class="navbar-item" href="./research.html">Research</a>
+          <a class="navbar-item" href="./projects.html">Projects</a>
+          <a class="navbar-item" href="./publications.html">Publications</a>
+          <a class="navbar-item" href="./research-notes.html">Research Notes</a>
+          <a class="navbar-item" href="./cv.html">CV</a>
+          <a class="navbar-item is-active" href="./contact.html">Contact</a>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-text" href="mailto:kavyaagrawal58@gmail.com" title="Email">
+                <span class="icon"><i class="fas fa-envelope"></i></span>
+              </a>
+              <a class="button is-text" href="https://www.linkedin.com/in/kavya-agrawal02/" target="_blank" title="LinkedIn">
+                <span class="icon"><i class="fab fa-linkedin"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-nine-tenths content">
+            <h1 class="title is-2 mb-6">Contact Information</h1>
+
+            <div class="columns is-variable is-8">
+              <!-- Left Column: Details -->
+              <div class="column is-half content">
+                <h3 class="title is-4 mb-4">Get in Touch</h3>
+                <p>
+                  For inquiries regarding fellowships, postdoctoral openings, academic collaborations, or questions about code and datasets, please use the contact details below or send a message using the form.
+                </p>
+
+                <h4 class="title is-5 mb-2"><span class="icon mr-2"><i class="fas fa-envelope"></i></span>Email Coordinates</h4>
+                <p class="mb-4">
+                  <strong>Institutional:</strong> <a href="mailto:kavya.agrawal@terisas.ac.in">kavya.agrawal@terisas.ac.in</a><br>
+                  <strong>Personal:</strong> <a href="mailto:kavyaagrawal58@gmail.com">kavyaagrawal58@gmail.com</a>
+                </p>
+
+                <h4 class="title is-5 mb-2"><span class="icon mr-2"><i class="fas fa-university"></i></span>Mailing Address</h4>
+                <p class="mb-4">
+                  Department of Natural & Applied Sciences,<br>
+                  TERI School of Advanced Studies,<br>
+                  10, Institutional Area, Vasant Kunj,<br>
+                  New Delhi – 110070, India
+                </p>
+
+                <h4 class="title is-5 mb-3"><span class="icon mr-2"><i class="fas fa-link"></i></span>Academic Portals</h4>
+                <div class="buttons">
+                  <a class="button is-small is-light" href="https://scholar.google.com/citations?user=yXQUQ6YAAAAJ&amp;hl=en" target="_blank">
+                    <span class="icon"><i class="ai ai-google-scholar"></i></span>
+                    <span>Google Scholar</span>
+                  </a>
+                  <a class="button is-small is-light" href="https://www.researchgate.net/profile/Kavya-Agrawal-4" target="_blank">
+                    <span class="icon"><i class="ai ai-researchgate"></i></span>
+                    <span>ResearchGate</span>
+                  </a>
+                  <a class="button is-small is-light" href="https://orcid.org/0009-0009-1032-2541" target="_blank">
+                    <span class="icon"><i class="ai ai-orcid"></i></span>
+                    <span>ORCID</span>
+                  </a>
+                  <a class="button is-small is-light" href="https://www.linkedin.com/in/kavya-agrawal02/" target="_blank">
+                    <span class="icon"><i class="fab fa-linkedin"></i></span>
+                    <span>LinkedIn</span>
+                  </a>
+                  <a class="button is-small is-light" href="https://github.com" target="_blank">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>GitHub</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right Column: Contact Form -->
+              <div class="column is-half">
+                <div class="box is-shadowless p-5">
+                  <h3 class="title is-4 mb-4">Send a Message</h3>
+                  
+                  <form action="#" method="POST" onsubmit="
+                    event.preventDefault();
+                    const name = document.getElementById('contact-name').value;
+                    const email = document.getElementById('contact-email').value;
+                    const subject = document.getElementById('contact-subject').value;
+                    const message = document.getElementById('contact-message').value;
+                    const mailtoUrl = 'mailto:kavyaagrawal58@gmail.com' +
+                      '?subject=' + encodeURIComponent(subject) +
+                      '&body=' + encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message);
+                    window.location.href = mailtoUrl;
+                  ">
+                    <div class="field">
+                      <label class="label">Name</label>
+                      <div class="control has-icons-left">
+                        <input class="input" id="contact-name" type="text" placeholder="Your Name" required>
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-user"></i>
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label class="label">Email</label>
+                      <div class="control has-icons-left">
+                        <input class="input" id="contact-email" type="email" placeholder="Your Email Address" required>
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-envelope"></i>
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label class="label">Subject</label>
+                      <div class="control">
+                        <input class="input" id="contact-subject" type="text" placeholder="Subject Topic" required>
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label class="label">Message</label>
+                      <div class="control">
+                        <textarea class="textarea" id="contact-message" placeholder="Your Message..." rows="4" required></textarea>
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <div class="control">
+                        <button type="submit" class="button is-dark is-fullwidth">
+                          <span class="icon"><i class="fas fa-paper-plane"></i></span>
+                          <span>Send Message</span>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container content has-text-centered is-size-7">
+        <p>
+          &copy; 2026 Kavya Agrawal. All rights reserved.
+        </p>
+        <div class="mt-2">
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="mx-1">
+            <i class="fab fa-creative-commons fa-lg"></i>
+            <i class="fab fa-creative-commons-by fa-lg"></i>
+            <i class="fab fa-creative-commons-nc fa-lg"></i>
+            <i class="fab fa-creative-commons-sa fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

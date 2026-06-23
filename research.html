@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        if (savedTheme === 'dark') {
+          document.documentElement.classList.add('dark-theme');
+        }
+      })();
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kavya Agrawal | Research</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css?v=16">
+    <script defer src="https://use.fontawesome.com/releases/v6.5.2/js/all.js"></script>
+    <script src="./assets/js/navbar-burger.js"></script>
+
+      <!-- PWA & Favicon Metadata -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#2A7EFF">
+    <script src="./assets/js/pwa.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+        <a class="navbar-item" href="./index.html">
+          <strong>Kavya Agrawal</strong>
+        </a>
+        <div role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-main">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </div>
+      </div>
+      <div id="navbar-main" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="./index.html">Home</a>
+          <a class="navbar-item" href="./about.html">About</a>
+          <a class="navbar-item" href="./experience.html">Education & Experience</a>
+          <a class="navbar-item is-active" href="./research.html">Research</a>
+          <a class="navbar-item" href="./projects.html">Projects</a>
+          <a class="navbar-item" href="./publications.html">Publications</a>
+          <a class="navbar-item" href="./research-notes.html">Research Notes</a>
+          <a class="navbar-item" href="./cv.html">CV</a>
+          <a class="navbar-item" href="./contact.html">Contact</a>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-text" href="mailto:kavyaagrawal58@gmail.com" title="Email">
+                <span class="icon"><i class="fas fa-envelope"></i></span>
+              </a>
+              <a class="button is-text" href="https://www.linkedin.com/in/kavya-agrawal02/" target="_blank" title="LinkedIn">
+                <span class="icon"><i class="fab fa-linkedin"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-nine-tenths content">
+            <h1 class="title is-2 mb-6">Research Themes</h1>
+
+            <!-- Theme 1 -->
+            <div id="theme1" class="mb-6 pt-4">
+              <h2 class="title is-3 mb-3">Theme 1: Groundwater Contamination</h2>
+              <div class="box is-shadowless p-5">
+                <h4 class="title is-5 mb-2">Overview</h4>
+                <p>
+                  High concentrations of toxic geogenic elements—primarily uranium, fluoride, and arsenic—in drinking water systems pose severe health hazards to millions in India. This theme investigates the hydrogeochemical controls, spatial distribution, and release pathways of these toxic contaminants.
+                </p>
+                <h4 class="title is-5 mb-2">Key Questions</h4>
+                <ul>
+                  <li>What environmental, geomorphological, and mineralogical variables control the release of contaminants into alluvial and crystalline aquifers?</li>
+                  <li>Can we accurately predict pollution levels in unsampled geographical blocks?</li>
+                </ul>
+                <h4 class="title is-5 mb-2">Methods</h4>
+                <p>
+                  We compile extensive groundwater chemical data and couple them with spatial predictive algorithms (e.g., Random Forest, XGBoost, Support Vector Machines) and interpretability libraries like SHAP (Shapley Additive exPlanations).
+                </p>
+                <h4 class="title is-5 mb-2">Datasets</h4>
+                <p>
+                  Central Ground Water Board (CGWB) chemical logs, soil chemistry indices, gridded geological profiles, and meteorological records.
+                </p>
+                <h4 class="title is-5 mb-2">Outputs & Research Maps</h4>
+                <p>
+                  High-resolution probability and hazard risk maps depicting groundwater contamination hotspots across selected states in India.
+                </p>
+              </div>
+            </div>
+
+            <hr class="my-6">
+
+            <!-- Theme 2 -->
+            <div id="theme2" class="mb-6 pt-4">
+              <h2 class="title is-3 mb-3">Theme 2: Geospatial AI & Machine Learning</h2>
+              <div class="box is-shadowless p-5">
+                <h4 class="title is-5 mb-2">Overview</h4>
+                <p>
+                  Applying artificial intelligence and statistical learning to environmental remote sensing datasets. This work bridges the gap between raw planetary observations and physical hydrological outcomes.
+                </p>
+                <h4 class="title is-5 mb-2">Methods</h4>
+                <p>
+                  Applying convolutional neural networks (CNNs), spatial neural networks, regression-kriging, and multi-sensor data fusion.
+                </p>
+                <h4 class="title is-5 mb-2">Applications</h4>
+                <p>
+                  Hotspot predicting, model benchmarking under aquifer heterogeneity, and mapping spatial uncertainty boundaries.
+                </p>
+              </div>
+            </div>
+
+            <hr class="my-6">
+
+            <!-- Theme 3 -->
+            <div id="theme3" class="mb-6 pt-4">
+              <h2 class="title is-3 mb-3">Theme 3: Environmental Health & Exposure Assessment</h2>
+              <div class="box is-shadowless p-5">
+                <h4 class="title is-5 mb-2">Overview</h4>
+                <p>
+                  Quantifying population-level exposure risks associated with environmental toxins.
+                </p>
+                <h4 class="title is-5 mb-2">Methods</h4>
+                <p>
+                  Integrating population census maps, demographic dynamics, and contamination probability layers inside GIS environments to calculate regional hazard index (HI) values.
+                </p>
+                <h4 class="title is-5 mb-2">Applications</h4>
+                <p>
+                  Estimating toxic ingestion dosages, locating vulnerable rural segments, and guiding public health monitoring efforts.
+                </p>
+              </div>
+            </div>
+
+            <hr class="my-6">
+
+            <!-- Theme 4 -->
+            <div id="theme4" class="mb-6 pt-4">
+              <h2 class="title is-3 mb-3">Theme 4: Policy Diagnostics & Governance Assessment</h2>
+              <div class="box is-shadowless p-5">
+                <h4 class="title is-5 mb-2">Overview</h4>
+                <p>
+                  Investigating institutional frameworks and designing environmental governance diagnostics to improve municipal supplies.
+                </p>
+                <h4 class="title is-5 mb-2">Methods</h4>
+                <p>
+                  Applying municipal water balance models, socio-economic survey surveys, and analyzing local policy mandates.
+                </p>
+                <h4 class="title is-5 mb-2">Applications</h4>
+                <p>
+                  Feasibility audits of 24/7 continuous supply in metropolitan Delhi and mitigating light pollution in critical sanctuaries.
+                </p>
+              </div>
+            </div>
+
+            <hr class="my-6">
+
+            <!-- Theme 5 -->
+            <div id="theme5" class="mb-6 pt-4">
+              <h2 class="title is-3 mb-3">Theme 5: Cryosphere, Climate & Hydrology</h2>
+              <div class="box is-shadowless p-5">
+                <h4 class="title is-5 mb-2">Overview</h4>
+                <p>
+                  Tracking rapid changes in High Mountain Asia's glaciers, seasonal snow cover, and permafrost distributions under changing climate cycles.
+                </p>
+                <h4 class="title is-5 mb-2">Methods</h4>
+                <p>
+                  Mann-Kendall Trend test, Theil-Sen's slope analysis, and computing thermal indices (MAAT, PISR, BMAT) over 20-year MODIS time-series.
+                </p>
+                <h4 class="title is-5 mb-2">Applications</h4>
+                <p>
+                  Mapping spatial permafrost boundaries in the Indus River Basin, tracking snow cover Dynamics, and charting elevation-wise LST changes.
+                </p>
+              </div>
+            </div>
+
+            <hr class="my-6">
+
+            <!-- Map & Figure Gallery Section -->
+            <div class="mb-6">
+              <h2 class="title is-3 mb-4"><span class="icon mr-2"><i class="fas fa-images"></i></span>Map & Figure Gallery</h2>
+              <p class="has-text-grey-dark mb-4">
+                Selected map outputs and data visualizations from our research papers and ongoing projects:
+              </p>
+              
+              <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-card">
+                  <a href="./assets/images/projects/project7.png" target="_blank">
+                    <img src="./assets/images/projects/project7.png" alt="Thermal Distribution and Permafrost Mapping">
+                  </a>
+                  <div class="gallery-card-content">
+                    <h4 class="title is-6 mb-1">Himalayan Cryospheric Extent</h4>
+                    <p class="is-size-7 has-text-grey-dark mb-0">
+                      Calculated Mean Annual Air Temperature (MAAT) and snow cover estimates used to model permafrost boundaries.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-card">
+                  <a href="./assets/images/projects/project6.png" target="_blank">
+                    <img src="./assets/images/projects/project6.png" alt="Land Surface Temperature Trends Analysis">
+                  </a>
+                  <div class="gallery-card-content">
+                    <h4 class="title is-6 mb-1">Indus Basin LST Trends</h4>
+                    <p class="is-size-7 has-text-grey-dark mb-0">
+                      Elevation-wise daytime/nighttime MODIS LST trends from 2000 to 2020, showing thermal divergence.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container content has-text-centered is-size-7">
+        <p>
+          &copy; 2026 Kavya Agrawal. All rights reserved.
+        </p>
+        <div class="mt-2">
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="mx-1">
+            <i class="fab fa-creative-commons fa-lg"></i>
+            <i class="fab fa-creative-commons-by fa-lg"></i>
+            <i class="fab fa-creative-commons-nc fa-lg"></i>
+            <i class="fab fa-creative-commons-sa fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

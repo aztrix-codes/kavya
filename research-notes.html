@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        if (savedTheme === 'dark') {
+          document.documentElement.classList.add('dark-theme');
+        }
+      })();
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kavya Agrawal | Research Notes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css?v=16">
+    <script defer src="https://use.fontawesome.com/releases/v6.5.2/js/all.js"></script>
+    <script src="./assets/js/navbar-burger.js"></script>
+
+      <!-- PWA & Favicon Metadata -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#2A7EFF">
+    <script src="./assets/js/pwa.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+        <a class="navbar-item" href="./index.html">
+          <strong>Kavya Agrawal</strong>
+        </a>
+        <div role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-main">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </div>
+      </div>
+      <div id="navbar-main" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="./index.html">Home</a>
+          <a class="navbar-item" href="./about.html">About</a>
+          <a class="navbar-item" href="./experience.html">Education & Experience</a>
+          <a class="navbar-item" href="./research.html">Research</a>
+          <a class="navbar-item" href="./projects.html">Projects</a>
+          <a class="navbar-item" href="./publications.html">Publications</a>
+          <a class="navbar-item is-active" href="./research-notes.html">Research Notes</a>
+          <a class="navbar-item" href="./cv.html">CV</a>
+          <a class="navbar-item" href="./contact.html">Contact</a>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-text" href="mailto:kavyaagrawal58@gmail.com" title="Email">
+                <span class="icon"><i class="fas fa-envelope"></i></span>
+              </a>
+              <a class="button is-text" href="https://www.linkedin.com/in/kavya-agrawal02/" target="_blank" title="LinkedIn">
+                <span class="icon"><i class="fab fa-linkedin"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-nine-tenths content">
+            <h1 class="title is-2 mb-4">Research Notes</h1>
+            <p class="subtitle is-5 has-text-grey-dark mb-5">
+              Academic blog containing research updates, GEE tutorials, data notes, and graduate school reflections.
+            </p>
+
+            <!-- Categories Filter Tabs -->
+            <div class="tabs category-tabs mb-5">
+              <ul>
+                <li><a class="is-active" data-filter="all">All posts</a></li>
+                <li><a data-filter="articles">Research Articles</a></li>
+                <li><a data-filter="tutorials">Technical Tutorials</a></li>
+                <li><a data-filter="reflections">Conference Reflections</a></li>
+                <li><a data-filter="methodology">Methodology Notes</a></li>
+                <li><a data-filter="stories">Data Stories</a></li>
+                <li><a data-filter="essays">Opinion Essays</a></li>
+              </ul>
+            </div>
+
+            <!-- Blog Posts Container -->
+            <div class="columns is-multiline" id="blog-posts">
+              <!-- Post 1 -->
+              <div class="column is-6 blog-post-card" data-category="articles" id="post1">
+                <div class="box is-shadowless p-5 mb-0" style="border: 1px solid #e2e8f0; height: 100%; display: flex; flex-direction: column;">
+                  <div class="is-flex is-justify-content-space-between mb-2">
+                    <span class="tag is-primary is-light">Research Articles</span>
+                    <span class="has-text-grey is-size-7">June 2024</span>
+                  </div>
+                  <h3 class="title is-5 mb-3" style="color: #1a202c;">Understanding Groundwater Contamination</h3>
+                  <p class="is-size-6 mb-4" style="flex-grow: 1; color: #4a5568;">
+                    Exploring the geological, chemical, and anthropogenic mechanisms that govern the release of heavy metals and radioactive elements in aquifers.
+                  </p>
+                  <a class="has-text-link font-weight-500 is-size-7" href="#">Read Note &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Post 2 -->
+              <div class="column is-6 blog-post-card" data-category="tutorials" id="post2">
+                <div class="box is-shadowless p-5 mb-0" style="border: 1px solid #e2e8f0; height: 100%; display: flex; flex-direction: column;">
+                  <div class="is-flex is-justify-content-space-between mb-2">
+                    <span class="tag is-info is-light">Technical Tutorials</span>
+                    <span class="has-text-grey is-size-7">May 2024</span>
+                  </div>
+                  <h3 class="title is-5 mb-3" style="color: #1a202c;">How Spatial Resolution Affects Prediction</h3>
+                  <p class="is-size-6 mb-4" style="flex-grow: 1; color: #4a5568;">
+                    Analyzing structural changes and prediction variance in machine learning when resampling raster resolutions between 30m and 1km.
+                  </p>
+                  <a class="has-text-link font-weight-500 is-size-7" href="#">Read Note &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Post 3 -->
+              <div class="column is-6 blog-post-card" data-category="tutorials" id="post3">
+                <div class="box is-shadowless p-5 mb-0" style="border: 1px solid #e2e8f0; height: 100%; display: flex; flex-direction: column;">
+                  <div class="is-flex is-justify-content-space-between mb-2">
+                    <span class="tag is-info is-light">Technical Tutorials</span>
+                    <span class="has-text-grey is-size-7">April 2024</span>
+                  </div>
+                  <h3 class="title is-5 mb-3" style="color: #1a202c;">What SHAP Actually Tells Us</h3>
+                  <p class="is-size-6 mb-4" style="flex-grow: 1; color: #4a5568;">
+                    A guide on applying Shapley values to interpret and visualize spatial variables in environmental random forest models.
+                  </p>
+                  <a class="has-text-link font-weight-500 is-size-7" href="#">Read Note &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Post 4 -->
+              <div class="column is-6 blog-post-card" data-category="stories" id="post4">
+                <div class="box is-shadowless p-5 mb-0" style="border: 1px solid #e2e8f0; height: 100%; display: flex; flex-direction: column;">
+                  <div class="is-flex is-justify-content-space-between mb-2">
+                    <span class="tag is-success is-light">Data Stories</span>
+                    <span class="has-text-grey is-size-7">March 2024</span>
+                  </div>
+                  <h3 class="title is-5 mb-3" style="color: #1a202c;">Lessons from Building a National Uranium Model</h3>
+                  <p class="is-size-6 mb-4" style="flex-grow: 1; color: #4a5568;">
+                    Reflections on georeferencing, aligning diverse municipal records, and managing grid projections at a continental scale.
+                  </p>
+                  <a class="has-text-link font-weight-500 is-size-7" href="#">Read Note &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Post 5 -->
+              <div class="column is-6 blog-post-card" data-category="methodology" id="post5">
+                <div class="box is-shadowless p-5 mb-0" style="border: 1px solid #e2e8f0; height: 100%; display: flex; flex-direction: column;">
+                  <div class="is-flex is-justify-content-space-between mb-2">
+                    <span class="tag is-link is-light">Methodology Notes</span>
+                    <span class="has-text-grey is-size-7">Feb 2024</span>
+                  </div>
+                  <h3 class="title is-5 mb-3" style="color: #1a202c;">Remote Sensing for Public Health</h3>
+                  <p class="is-size-6 mb-4" style="flex-grow: 1; color: #4a5568;">
+                    Bridging spatial demographics and satellite-derived parameters to calculate exposure doses in epidemiological risk profiles.
+                  </p>
+                  <a class="has-text-link font-weight-500 is-size-7" href="#">Read Note &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Post 6 -->
+              <div class="column is-6 blog-post-card" data-category="essays" id="post6">
+                <div class="box is-shadowless p-5 mb-0" style="border: 1px solid #e2e8f0; height: 100%; display: flex; flex-direction: column;">
+                  <div class="is-flex is-justify-content-space-between mb-2">
+                    <span class="tag is-warning is-light">Opinion Essays</span>
+                    <span class="has-text-grey is-size-7">Jan 2024</span>
+                  </div>
+                  <h3 class="title is-5 mb-3" style="color: #1a202c;">Research Life During a PhD</h3>
+                  <p class="is-size-6 mb-4" style="flex-grow: 1; color: #4a5568;">
+                    Personal reflections on maintaining focus, managing geospatial workflows, and finding community within academic networks.
+                  </p>
+                  <a class="has-text-link font-weight-500 is-size-7" href="#">Read Note &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client-side Categories Filtering Logic -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const filterLinks = document.querySelectorAll('.category-tabs a');
+        const cards = document.querySelectorAll('.blog-post-card');
+
+        filterLinks.forEach(link => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Toggle active link
+            filterLinks.forEach(l => l.classList.remove('is-active'));
+            link.classList.add('is-active');
+
+            const filterValue = link.dataset.filter;
+
+            cards.forEach(card => {
+              if (filterValue === 'all' || card.dataset.category === filterValue) {
+                card.style.display = 'block';
+              } else {
+                card.style.display = 'none';
+              }
+            });
+          });
+        });
+      });
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container content has-text-centered is-size-7">
+        <p>
+          &copy; 2026 Kavya Agrawal. All rights reserved.
+        </p>
+        <div class="mt-2">
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="mx-1">
+            <i class="fab fa-creative-commons fa-lg"></i>
+            <i class="fab fa-creative-commons-by fa-lg"></i>
+            <i class="fab fa-creative-commons-nc fa-lg"></i>
+            <i class="fab fa-creative-commons-sa fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

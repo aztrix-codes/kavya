@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        if (savedTheme === 'dark') {
+          document.documentElement.classList.add('dark-theme');
+        }
+      })();
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kavya Agrawal | Projects</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css?v=16">
+    <script defer src="https://use.fontawesome.com/releases/v6.5.2/js/all.js"></script>
+    <script src="./assets/js/navbar-burger.js"></script>
+
+      <!-- PWA & Favicon Metadata -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#2A7EFF">
+    <script src="./assets/js/pwa.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+        <a class="navbar-item" href="./index.html">
+          <strong>Kavya Agrawal</strong>
+        </a>
+        <div role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-main">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </div>
+      </div>
+      <div id="navbar-main" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="./index.html">Home</a>
+          <a class="navbar-item" href="./about.html">About</a>
+          <a class="navbar-item" href="./experience.html">Education & Experience</a>
+          <a class="navbar-item" href="./research.html">Research</a>
+          <a class="navbar-item is-active" href="./projects.html">Projects</a>
+          <a class="navbar-item" href="./publications.html">Publications</a>
+          <a class="navbar-item" href="./research-notes.html">Research Notes</a>
+          <a class="navbar-item" href="./cv.html">CV</a>
+          <a class="navbar-item" href="./contact.html">Contact</a>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-text" href="mailto:kavyaagrawal58@gmail.com" title="Email">
+                <span class="icon"><i class="fas fa-envelope"></i></span>
+              </a>
+              <a class="button is-text" href="https://www.linkedin.com/in/kavya-agrawal02/" target="_blank" title="LinkedIn">
+                <span class="icon"><i class="fab fa-linkedin"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-nine-tenths content">
+            <h1 class="title is-2 mb-6">Research Projects</h1>
+
+            <!-- Project 1: India Uranium Risk Mapping (Image Left, Content Right) -->
+            <div id="uranium-mapping" class="columns is-7 is-variable is-vcentered mb-6">
+              <div class="column is-two-fifths">
+                <figure class="image">
+                  <img class="is-rounded-small" src="./assets/images/projects/project1.png" alt="India Uranium Risk Mapping" style="border: 1px solid #cbd5e1; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                </figure>
+              </div>
+              <div class="column is-three-fifths content">
+                <h3 class="title is-4 mb-2">India Uranium Risk Mapping</h3>
+                <span class="tag is-info mb-3">Status: Ongoing</span>
+                <p>
+                  <strong>Overview:</strong> Predicting and mapping regional groundwater uranium hazards across vulnerable aquifers in India using machine learning algorithms.
+                </p>
+                <p>
+                  <strong>Objectives:</strong> To model chemical controls, map high-risk pockets, and characterize geochemical parameters affecting uranium mobilization.
+                </p>
+                <p>
+                  <strong>Study Area:</strong> Indo-Gangetic and Peninsular aquifers, India.
+                </p>
+                <p>
+                  <strong>Datasets:</strong> CGWB water quality surveys, satellite climate layers, and soil geochemical properties.
+                </p>
+                <p>
+                  <strong>Methods:</strong> Random Forest modeling, geo-spatial Kriging interpolation, and SHAP explainability analyses.
+                </p>
+                <p>
+                  <strong>Results:</strong> Discovered localized pockets of uranium anomalies linked to bicarbonate complexes and heavy groundwater abstraction.
+                </p>
+                <p class="mb-0">
+                  <a class="button is-small is-dark" href="https://github.com" target="_blank">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>View Repository</span>
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <hr class="my-6">
+
+            <!-- Project 2: Fluoride DL Benchmarking (Content Left, Image Right) -->
+            <div id="fluoride-benchmarking" class="columns is-7 is-variable is-vcentered mb-6">
+              <div class="column is-three-fifths content">
+                <h3 class="title is-4 mb-2">Fluoride Deep Learning Benchmarking</h3>
+                <span class="tag is-info mb-3">Status: Ongoing</span>
+                <p>
+                  <strong>Overview:</strong> Benchmarking deep neural networks against traditional machine learning to predict geogenic fluoride contamination in deep groundwater aquifers.
+                </p>
+                <p>
+                  <strong>Objectives:</strong> Evaluate neural networks and tree-based ensembles (XGBoost, Random Forest) on unbalanced geochemical datasets.
+                </p>
+                <p>
+                  <strong>Study Area:</strong> Hard rock aquifers of Southern and Western India.
+                </p>
+                <p>
+                  <strong>Datasets:</strong> Well chemical assays, remote-sensing geological features, and climate parameters.
+                </p>
+                <p>
+                  <strong>Methods:</strong> Convolutional networks (1D CNNs), deep multi-layer perceptrons, spatial cross-validation, and ROC-AUC metrics.
+                </p>
+                <p>
+                  <strong>Results:</strong> Found that deep neural networks achieved high recall rates on localized fluoride anomalies, improving detection of contamination.
+                </p>
+                <p class="mb-0">
+                  <a class="button is-small is-dark" href="https://github.com" target="_blank">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>View Repository</span>
+                  </a>
+                </p>
+              </div>
+              <div class="column is-two-fifths">
+                <figure class="image">
+                  <img class="is-rounded-small" src="./assets/images/projects/project2.png" alt="Fluoride DL Benchmarking" style="border: 1px solid #cbd5e1; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                </figure>
+              </div>
+            </div>
+
+            <hr class="my-6">
+
+            <!-- Project 3: Arsenic Contamination Modelling (Image Left, Content Right) -->
+            <div id="arsenic-modelling" class="columns is-7 is-variable is-vcentered mb-6">
+              <div class="column is-two-fifths">
+                <figure class="image">
+                  <img class="is-rounded-small" src="./assets/images/projects/project3.png" alt="Arsenic Contamination Modelling" style="border: 1px solid #cbd5e1; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                </figure>
+              </div>
+              <div class="column is-three-fifths content">
+                <h3 class="title is-4 mb-2">Arsenic Contamination Modelling</h3>
+                <span class="tag is-warning mb-3">Status: Planned</span>
+                <p>
+                  <strong>Overview:</strong> Modeling arsenic concentrations across alluvial sediments to identify key environmental and anthropogenic mobilization drivers.
+                </p>
+                <p>
+                  <strong>Objectives:</strong> Model arsenic dissolution kinetics under reducing conditions and assess seasonal mobilization variations.
+                </p>
+                <p>
+                  <strong>Study Area:</strong> Brahmaputra and Ganges alluvial basins.
+                </p>
+                <p>
+                  <strong>Datasets:</strong> Lithological logs, groundwater chemistry, and high-resolution digital elevation models.
+                </p>
+                <p>
+                  <strong>Methods:</strong> Spatial regression, geological profiles overlay, and geochemical thermodynamic calculations.
+                </p>
+                <p>
+                  <strong>Results:</strong> High concentrations of arsenic were found linked to shallow sand aquifers under high organic carbon sediments.
+                </p>
+              </div>
+            </div>
+
+            <hr class="my-6">
+
+            <!-- Project 4: Population Exposure Assessment (Content Left, Image Right) -->
+            <div id="exposure-assessment" class="columns is-7 is-variable is-vcentered mb-6">
+              <div class="column is-three-fifths content">
+                <h3 class="title is-4 mb-2">Population Exposure Assessment</h3>
+                <span class="tag is-info mb-3">Status: Ongoing</span>
+                <p>
+                  <strong>Overview:</strong> Estimating population-level exposure burdens associated with toxic drinking water sources using demographic overlays.
+                </p>
+                <p>
+                  <strong>Objectives:</strong> Calculate spatial demographic overlap with uranium and fluoride contamination zones to evaluate human health hazard indexes.
+                </p>
+                <p>
+                  <strong>Study Area:</strong> Rural districts across Northern India.
+                </p>
+                <p>
+                  <strong>Datasets:</strong> National census maps, gridded population layers (WorldPop), and contamination hazard maps.
+                </p>
+                <p>
+                  <strong>Methods:</strong> Spatial aggregation, toxicological dose calculations, and zonal statistics in GIS environments.
+                </p>
+                <p>
+                  <strong>Results:</strong> Identified critical rural zones where over 1.2 million residents ingest drinking water exceeding WHO guidelines for uranium.
+                </p>
+              </div>
+              <div class="column is-two-fifths">
+                <figure class="image">
+                  <img class="is-rounded-small" src="./assets/images/projects/project4.png" alt="Population Exposure Assessment" style="border: 1px solid #cbd5e1; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                </figure>
+              </div>
+            </div>
+
+            <hr class="my-6">
+
+            <!-- Project 5: Governance Diagnostic Framework (Image Left, Content Right) -->
+            <div id="governance-diagnostic" class="columns is-7 is-variable is-vcentered mb-6">
+              <div class="column is-two-fifths">
+                <figure class="image">
+                  <img class="is-rounded-small" src="./assets/images/projects/project5.png" alt="Governance Diagnostic Framework" style="border: 1px solid #cbd5e1; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                </figure>
+              </div>
+              <div class="column is-three-fifths content">
+                <h3 class="title is-4 mb-2">Governance Diagnostic Framework</h3>
+                <span class="tag is-info mb-3">Status: Ongoing</span>
+                <p>
+                  <strong>Overview:</strong> Developing resource diagnostics to analyze continuous water supply feasibility and urban water management in metropolitan Delhi.
+                </p>
+                <p>
+                  <strong>Objectives:</strong> Map supply line leakage patterns, evaluate water security policies, and recommend infrastructure improvements.
+                </p>
+                <p>
+                  <strong>Study Area:</strong> National Capital Territory of Delhi, India.
+                </p>
+                <p>
+                  <strong>Datasets:</strong> Delhi Jal Board flow statistics, socio-economic household surveys, and geographic maps.
+                </p>
+                <p>
+                  <strong>Methods:</strong> Policy diagnostics, network water balancing, and spatial regression of water leakage anomalies.
+                </p>
+                <p>
+                  <strong>Results:</strong> Outlined supply loss zones and detailed governance models to support continuous 24/7 supply implementation.
+                </p>
+              </div>
+            </div>
+
+            <hr class="my-6">
+
+            <!-- Project 6: Indus Basin LST Study (Content Left, Image Right) -->
+            <div id="indus-lst" class="columns is-7 is-variable is-vcentered mb-6">
+              <div class="column is-three-fifths content">
+                <h3 class="title is-4 mb-2">Indus Basin LST Study</h3>
+                <span class="tag is-success mb-3">Status: Completed</span>
+                <p>
+                  <strong>Overview:</strong> Analyzing spatial and elevation-wise Daytime and Nighttime Land Surface Temperature (LST) trends across the Indus Basin over 20 years.
+                </p>
+                <p>
+                  <strong>Objectives:</strong> To evaluate LST warming rates and analyze thermal variations across various elevations.
+                </p>
+                <p>
+                  <strong>Study Area:</strong> Indus River Basin, High Mountain Asia.
+                </p>
+                <p>
+                  <strong>Datasets:</strong> MODIS LST (Terra and Aqua, 1km grid) and SRTM Digital Elevation Models.
+                </p>
+                <p>
+                  <strong>Methods:</strong> Mann-Kendall trend tests, Theil-Sen's slope estimators, and elevation zoning calculations on Google Earth Engine.
+                </p>
+                <p>
+                  <strong>Results:</strong> Found localized warming rates in high-altitude zones, showing a thermal divergence between daytime and nighttime LSTs.
+                </p>
+                <p>
+                  <strong>Publications:</strong> Mal, S., Agrawal, K., Rani, S. et al. (2023). <em>Journal of Mountain Science</em>.
+                </p>
+                <p class="mb-0">
+                  <a class="button is-small is-dark" href="https://doi.org/10.1007/s11629-023-8157-8" target="_blank">
+                    <span class="icon"><i class="fas fa-external-link-alt"></i></span>
+                    <span>Springer Publication Link</span>
+                  </a>
+                </p>
+              </div>
+              <div class="column is-two-fifths">
+                <figure class="image">
+                  <img class="is-rounded-small" src="./assets/images/projects/project6.png" alt="Indus Basin LST Study" style="border: 1px solid #cbd5e1; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                </figure>
+              </div>
+            </div>
+
+            <hr class="my-6">
+
+            <!-- Project 7: Future Cryosphere Projects (Image Left, Content Right) -->
+            <div id="future-cryosphere" class="columns is-7 is-variable is-vcentered mb-6">
+              <div class="column is-two-fifths">
+                <figure class="image">
+                  <img class="is-rounded-small" src="./assets/images/projects/project7.png" alt="Future Cryosphere Projects" style="border: 1px solid #cbd5e1; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                </figure>
+              </div>
+              <div class="column is-three-fifths content">
+                <h3 class="title is-4 mb-2">Future Cryosphere Projects</h3>
+                <span class="tag is-warning mb-3">Status: Planned</span>
+                <p>
+                  <strong>Overview:</strong> Modeling regional permafrost boundary dynamics and glacier changes in High Mountain Asia under climate change.
+                </p>
+                <p>
+                  <strong>Objectives:</strong> Map the distribution of permafrost using thermal indicators (MAAT, BMAT) and analyze glacier mass balance variations.
+                </p>
+                <p>
+                  <strong>Study Area:</strong> Hindu Kush Himalaya and Karakoram ranges.
+                </p>
+                <p>
+                  <strong>Datasets:</strong> Multi-sensor satellite imagery (Landsat, Sentinel), snow-cover indices, and meteorological models.
+                </p>
+                <p>
+                  <strong>Methods:</strong> Spatial thermal modeling, glacier velocity mapping, and multi-sensor data fusion.
+                </p>
+                <p>
+                  <strong>Results:</strong> Development of predictive scenarios for runoff variations and structural permafrost degradation.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container content has-text-centered is-size-7">
+        <p>
+          &copy; 2026 Kavya Agrawal. All rights reserved.
+        </p>
+        <div class="mt-2">
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="mx-1">
+            <i class="fab fa-creative-commons fa-lg"></i>
+            <i class="fab fa-creative-commons-by fa-lg"></i>
+            <i class="fab fa-creative-commons-nc fa-lg"></i>
+            <i class="fab fa-creative-commons-sa fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

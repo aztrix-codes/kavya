@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        if (savedTheme === 'dark') {
+          document.documentElement.classList.add('dark-theme');
+        }
+      })();
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kavya Agrawal | About</title>
+    <link class="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css?v=16">
+    <script defer src="https://use.fontawesome.com/releases/v6.5.2/js/all.js"></script>
+    <script src="./assets/js/navbar-burger.js"></script>
+
+      <!-- PWA & Favicon Metadata -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#2A7EFF">
+    <script src="./assets/js/pwa.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+        <a class="navbar-item" href="./index.html">
+          <strong>Kavya Agrawal</strong>
+        </a>
+        <div role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-main">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </div>
+      </div>
+      <div id="navbar-main" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="./index.html">Home</a>
+          <a class="navbar-item is-active" href="./about.html">About</a>
+          <a class="navbar-item" href="./experience.html">Education & Experience</a>
+          <a class="navbar-item" href="./research.html">Research</a>
+          <a class="navbar-item" href="./projects.html">Projects</a>
+          <a class="navbar-item" href="./publications.html">Publications</a>
+          <a class="navbar-item" href="./research-notes.html">Research Notes</a>
+          <a class="navbar-item" href="./cv.html">CV</a>
+          <a class="navbar-item" href="./contact.html">Contact</a>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-text" href="mailto:kavyaagrawal58@gmail.com" title="Email">
+                <span class="icon"><i class="fas fa-envelope"></i></span>
+              </a>
+              <a class="button is-text" href="https://www.linkedin.com/in/kavya-agrawal02/" target="_blank" title="LinkedIn">
+                <span class="icon"><i class="fab fa-linkedin"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-nine-tenths content">
+            <h1 class="title is-2 mb-6">About Me</h1>
+            
+            <!-- Academic Biography -->
+            <div class="mb-6">
+              <h2 class="title is-4 mb-3">Academic Biography</h2>
+              <p>
+                My name is <strong>Kavya Agrawal</strong>, and I am a post-graduate researcher currently pursuing a Ph.D. in Natural & Applied Sciences at the <strong>TERI School of Advanced Studies</strong>, New Delhi, India. I hold a Master's degree in Geography from Dr. B.R. Ambedkar University, Agra, and a Bachelor of Arts (Honors) degree in Geography from Shaheed Bhagat Singh College, University of Delhi.
+              </p>
+              <p>
+                My research journey is rooted in geographical sciences and spatial reasoning. Over the course of my education, I developed an interest in investigating spatial distributions and physical anomalies. My work has evolved from local socio-economic impacts and urban sprawl analyses to modeling the dynamics of cold region hydrology, permafrost identification, and large-scale groundwater contamination assessment using cloud-computing tools and predictive modeling.
+              </p>
+              <p>
+                Currently, my Ph.D. research is focused on developing scalable and interpretable machine learning frameworks to model groundwater quality, focusing on toxic contaminants such as uranium, fluoride, and arsenic across India. By merging Earth observation datasets with hydrogeochemical profiles, I aim to create predictive tools that support long-term water safety.
+              </p>
+            </div>
+
+            <hr class="my-5">
+
+            <!-- Research Philosophy -->
+            <div class="mb-6">
+              <h2 class="title is-4 mb-3">Research Philosophy</h2>
+              <p>
+                I approach scientific research through an <strong>interdisciplinary lens</strong>. I believe that environmental problems—such as water scarcity, groundwater contamination, and cryospheric decline—cannot be solved in academic silos. Rather, they require a synthesis of physical hydrology, satellite observations, advanced data science, and governance diagnostics.
+              </p>
+              <p>
+                In my work, I emphasize:
+              </p>
+              <ul>
+                <li><strong>Empirical Rigour:</strong> Utilizing multi-source Earth observation (MODIS, Landsat, Sentinel) combined with ground-truth water chemistry observations.</li>
+                <li><strong>Interpretability in AI:</strong> Moving beyond "black-box" machine learning to build models whose predictions can be physically explained and verified by hydrologists and policy makers.</li>
+                <li><strong>Actionable Science:</strong> Aligning models and spatial indicators directly with governance requirements to support sustainable and evidence-based environmental policy.</li>
+              </ul>
+              <p>
+                My long-term goal is to build transferable and scalable environmental intelligence systems that translate scientific models into local policies, contributing to climate resilience and public health.
+              </p>
+            </div>
+
+            <hr class="my-5">
+
+            <!-- Current Interests -->
+            <div class="mb-6">
+              <h2 class="title is-4 mb-3">Current Interests</h2>
+              <p>
+                My primary research interests span several overlapping domains in Earth systems and data science:
+              </p>
+              <div class="columns">
+                <div class="column is-half">
+                  <ul>
+                    <li>Groundwater Contamination Modeling</li>
+                    <li>Geospatial AI & Deep Learning Applications</li>
+                    <li>Environmental Exposure & Public Health Risk</li>
+                    <li>Cloud-based Earth Observation (Google Earth Engine)</li>
+                  </ul>
+                </div>
+                <div class="column is-half">
+                  <ul>
+                    <li>High Mountain Asia (HMA) Climate Dynamics</li>
+                    <li>Permafrost Modeling & Spatial Extents</li>
+                    <li>Glacier / Snow Cover Depletion Calculations</li>
+                    <li>Water Security Governance & Policy Diagnostics</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <hr class="my-5">
+
+            <!-- Future Directions -->
+            <div class="mb-6">
+              <h2 class="title is-4 mb-3">Future Directions</h2>
+              <p>
+                Moving forward, I intend to expand my research into:
+              </p>
+              <ul>
+                <li><strong>National-Scale Risk Mapping:</strong> Building high-resolution, dynamic risk atlases for groundwater quality across the entire Indian subcontinent.</li>
+                <li><strong>Climate-Induced Contamination Dynamics:</strong> Researching how shifting monsoon patterns, extreme climate events, and groundwater depletion affect pollutant concentrations over time.</li>
+                <li><strong>Himalayan Glacier Runoff Modeling:</strong> Modeling how cryospheric melting changes downstream water availability and chemical exposures in major river basins.</li>
+              </ul>
+              <p>
+                I am keen to develop collaborations with international hydro-geologists, spatial statisticians, and public health researchers to co-design interdisciplinary frameworks.
+              </p>
+            </div>
+
+            <hr class="my-5">
+
+            <!-- Seeking Opportunities -->
+            <div class="mb-6">
+              <div class="box is-shadowless p-5">
+                <h2 class="title is-4 mb-3"><span class="icon mr-2 has-text-info"><i class="fas fa-search-location"></i></span>Seeking Opportunities</h2>
+                <p>
+                  I am actively seeking collaborations and research opportunities to enrich my Ph.D. work and prepare for future career steps:
+                </p>
+                <ul>
+                  <li><strong>Research Fellowships:</strong> International research stays and fellowship calls to exchange technical methods.</li>
+                  <li><strong>Interdisciplinary Projects:</strong> Joint research projects bridging computer science, hydrology, and public health.</li>
+                  <li><strong>Postdoctoral Roles & Collaborations:</strong> Early planning for postdoctoral fellowships in geospatial data science, water security, or environmental exposure modeling.</li>
+                </ul>
+                <p class="mb-0">
+                  If you are interested in collaborating or have opportunities in these fields, please feel free to reach out via my <a href="./contact.html">contact page</a>.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container content has-text-centered is-size-7">
+        <p>
+          &copy; 2026 Kavya Agrawal. All rights reserved.
+        </p>
+        <div class="mt-2">
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="mx-1">
+            <i class="fab fa-creative-commons fa-lg"></i>
+            <i class="fab fa-creative-commons-by fa-lg"></i>
+            <i class="fab fa-creative-commons-nc fa-lg"></i>
+            <i class="fab fa-creative-commons-sa fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

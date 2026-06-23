@@ -1,0 +1,837 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Prevent horizontal scroll and hide scrollbars globally */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem; /* Offsets scroll position for fixed header */
+}
+
+@media screen and (max-width: 1023px) {
+  html {
+    scroll-padding-top: 4.5rem;
+  }
+}
+
+/* Theme-specific custom variables */
+:root {
+  --background-color: #ffffff;
+  --body-text-color: #374151; /* Dark grey for body text readability */
+  --heading-color: #111827; /* Near black for headers */
+  --link-color: #2A7EFF;
+  --link-hover-color: #1a6ee6;
+  --navbar-bg: rgba(255, 255, 255, 0.8);
+  --section-bg: #ffffff;
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.02), 0 1px 2px rgba(0,0,0,0.04);
+  --card-hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --card-hover-border: #d1d5db;
+  --tag-bg: #f3f4f6;
+  --tag-hover-bg: #e5e7eb;
+  --tag-text: #374151;
+  --footer-bg: #f9fafb;
+  --footer-border: #e5e7eb;
+  --footer-text: #6b7280;
+  --hr-color: #e5e7eb;
+  
+  --button-dark-bg: #111827;
+  --button-dark-text: #ffffff;
+  --button-light-bg: #f9fafb;
+  --button-light-border: #e5e7eb;
+  --button-light-text: #374151;
+  
+  --input-bg: #ffffff;
+  --input-border: #d1d5db;
+  --input-text: #111827;
+  --table-border: #e5e7eb;
+  --navbar-text-color: #6b7280;
+  --navbar-active-color: #111827;
+
+  /* Override Bulma Light Mode Defaults */
+  --bulma-body-background-color: #ffffff;
+  --bulma-body-color: #374151;
+  --bulma-text: #374151;
+  --bulma-text-strong: #111827;
+  --bulma-link: #2A7EFF;
+  --bulma-link-hover: #1a6ee6;
+  --bulma-scheme-main: #ffffff;
+  --bulma-border: #e5e7eb;
+  --bulma-border-weak: #f3f4f6;
+  --bulma-title-color: #111827;
+  --bulma-subtitle-color: #4b5563;
+  --bulma-footer-background-color: #f9fafb;
+}
+
+html[data-theme="dark"] {
+  --background-color: #121212; /* Comfortable soft off-black background */
+  --body-text-color: #e5e5e5; /* Comfortable soft white text */
+  --heading-color: #ffffff; /* White headings */
+  --link-color: #2A7EFF; /* Accent link blue */
+  --link-hover-color: #5497ff;
+  --navbar-bg: rgba(18, 18, 18, 0.8);
+  --section-bg: #121212;
+  --card-bg: #1e1e1e; /* Comfortable off-black card background */
+  --card-border: #2d2d2d; /* Soft dark grey border */
+  --card-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --card-hover-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  --card-hover-border: #52525b;
+  --tag-bg: #262626;
+  --tag-hover-bg: #3f3f46;
+  --tag-text: #e5e5e5;
+  --footer-bg: #0c0c0c; /* Soft off-black footer background */
+  --footer-border: #1e1e1e;
+  --footer-text: #a3a3a3;
+  --hr-color: #2d2d2d;
+  
+  --button-dark-bg: #ffffff;
+  --button-dark-text: #121212;
+  --button-light-bg: #1e1e1e;
+  --button-light-border: #2d2d2d;
+  --button-light-text: #e5e5e5;
+  
+  --input-bg: #1e1e1e;
+  --input-border: #2d2d2d;
+  --input-text: #ffffff;
+  --table-border: #2d2d2d;
+  --navbar-text-color: #8b9bb4;
+  --navbar-active-color: #ffffff;
+
+  /* Override Bulma Dark Mode Defaults (Neutral off-black theme) */
+  --bulma-body-background-color: #121212;
+  --bulma-body-color: #e5e5e5;
+  --bulma-text: #e5e5e5;
+  --bulma-text-strong: #ffffff;
+  --bulma-link: #2A7EFF;
+  --bulma-link-hover: #5497ff;
+  --bulma-scheme-main: #121212;
+  --bulma-scheme-main-bis: #1e1e1e;
+  --bulma-scheme-main-ter: #262626;
+  --bulma-border: #2d2d2d;
+  --bulma-border-weak: #1e1e1e;
+  --bulma-title-color: #ffffff;
+  --bulma-subtitle-color: #a3a3a3;
+  --bulma-footer-background-color: #0c0c0c;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--body-text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  padding-top: 5.5rem; /* Offset padding for fixed navbar on desktop */
+}
+
+/* Typography Overrides */
+.content h1, .content h2, .content h3, .content h4 {
+  color: var(--heading-color) !important;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.content h1 {
+  font-size: 2.25rem;
+}
+
+.title {
+  color: var(--heading-color) !important;
+}
+
+.subtitle {
+  color: var(--body-text-color) !important;
+}
+
+/* Academic Blue Links */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+.has-text-link {
+  color: var(--link-color) !important;
+}
+
+.has-text-link:hover {
+  color: var(--link-hover-color) !important;
+}
+
+/* Navbar Styling */
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 998;
+  background-color: var(--navbar-bg) !important;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border-bottom: 1px solid var(--footer-border);
+  padding: 0.75rem 0;
+  transition: background-color 0.2s ease, border-color 0.2s ease, backdrop-filter 0.2s ease;
+}
+
+.navbar-brand strong {
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+  color: var(--heading-color);
+}
+
+.navbar-item {
+  font-weight: 500;
+  color: var(--navbar-text-color) !important;
+  transition: color 0.15s ease, background-color 0.15s ease;
+  position: relative;
+}
+
+/* Clear active and hover states with active theme color */
+.navbar-item:hover {
+  color: var(--navbar-active-color) !important;
+  background-color: transparent !important;
+}
+
+.navbar-item.is-active {
+  color: var(--navbar-active-color) !important;
+  font-weight: 600;
+  background-color: transparent !important;
+}
+
+/* Ensure branding logo keeps heading color on hover */
+.navbar-brand .navbar-item:hover,
+.navbar-brand .navbar-item:hover strong {
+  color: var(--heading-color) !important;
+}
+
+
+/* Reduce horizontal navbar items padding on desktop to fit screen sizes perfectly */
+/* Reduce horizontal navbar items padding on desktop to fit screen sizes perfectly */
+@media screen and (min-width: 1408px) {
+  .navbar-menu .navbar-item {
+    padding-left: 0.85rem !important;
+    padding-right: 0.85rem !important;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1407px) {
+  .navbar-menu .navbar-item {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar-start, .navbar-end, .navbar-menu {
+    gap: 0 !important;
+  }
+  /* Make navbar container fluid to stretch full screen width and remove margins */
+  .navbar .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+/* Spacing and Sections */
+.section {
+  padding: 4rem 1.5rem;
+  background-color: var(--background-color) !important;
+  min-height: 70vh;
+  transition: background-color 0.2s ease;
+}
+
+.section.is-shaded {
+  background-color: var(--footer-bg) !important;
+  border-top: 1px solid var(--footer-border);
+  border-bottom: 1px solid var(--footer-border);
+}
+
+/* Cards & Layout Items */
+.box {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  color: var(--body-text-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.box:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-hover-shadow);
+  border-color: var(--card-hover-border) !important;
+}
+
+.tag {
+  margin-right: 0.35rem;
+  margin-bottom: 0.35rem;
+  background-color: var(--tag-bg) !important;
+  color: var(--tag-text) !important;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.tag:hover {
+  background-color: var(--tag-hover-bg) !important;
+}
+
+/* Timeline Custom CSS */
+.timeline-item {
+  border-left: 2px solid var(--card-border);
+  padding-left: 1.5rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-item:last-child {
+  border-left: 2px solid transparent;
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--background-color);
+  border: 2px solid var(--heading-color);
+  position: absolute;
+  left: -6px;
+  top: 8px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Buttons */
+.button.is-dark {
+  background-color: var(--button-dark-bg) !important;
+  color: var(--button-dark-text) !important;
+  font-weight: 600;
+  border: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.button.is-dark:hover {
+  opacity: 0.9;
+}
+
+.button.is-light {
+  background-color: var(--button-light-bg) !important;
+  border: 1px solid var(--button-light-border) !important;
+  color: var(--button-light-text) !important;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.button.is-light:hover {
+  background-color: var(--tag-hover-bg) !important;
+  color: var(--heading-color) !important;
+}
+
+.button.is-text {
+  color: var(--body-text-color) !important;
+  background-color: transparent !important;
+  border: none !important;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.button.is-text:hover {
+  color: var(--heading-color) !important;
+  background-color: var(--tag-bg) !important;
+  text-decoration: none;
+}
+
+/* Forms */
+.input, .textarea {
+  background-color: var(--input-bg) !important;
+  border: 1px solid var(--input-border) !important;
+  color: var(--input-text) !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input::placeholder, .textarea::placeholder {
+  color: #9ca3af !important;
+}
+
+.input:focus, .textarea:focus {
+  border-color: var(--link-color) !important;
+  box-shadow: 0 0 0 0.125em rgba(37, 99, 235, 0.25) !important;
+}
+
+.label {
+  color: var(--body-text-color) !important;
+}
+
+/* Tables */
+.table {
+  color: var(--body-text-color) !important;
+  background-color: transparent !important;
+}
+
+.table th {
+  color: var(--heading-color) !important;
+  border-bottom: 2px solid var(--table-border) !important;
+}
+
+.table td {
+  border-bottom: 1px solid var(--table-border) !important;
+}
+
+.table.is-striped tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+html[data-theme="light"] .table.is-striped tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.015) !important;
+}
+
+.table.is-hoverable tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+html[data-theme="light"] .table.is-hoverable tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Custom Search Modal Highlight */
+.search-highlight {
+  background-color: #fef3c7;
+  color: #1e3a8a;
+  font-weight: 600;
+  padding: 0 0.15rem;
+  border-radius: 2px;
+}
+
+html[data-theme="dark"] .search-highlight {
+  background-color: #b45309;
+  color: #ffffff;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: var(--footer-bg) !important;
+  border-top: 1px solid var(--footer-border);
+  padding: 3rem 1.5rem;
+  color: var(--footer-text);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.footer a {
+  color: var(--body-text-color);
+  font-weight: 500;
+}
+
+.footer a:hover {
+  color: var(--heading-color);
+}
+
+/* Map Gallery Grid styles */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-card {
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-card-content {
+  padding: 1rem;
+}
+
+/* Rounded image */
+.is-rounded-small {
+  border-radius: 6px;
+  border: 1px solid var(--card-border) !important;
+}
+
+/* HR line overrides */
+hr {
+  background-color: var(--hr-color) !important;
+  height: 1px;
+}
+
+/* Category Tabs (Centralized) */
+.category-tabs .is-active {
+  font-weight: 700;
+  border-bottom: 2px solid var(--heading-color) !important;
+  color: var(--heading-color) !important;
+}
+
+/* Mobile Drawer Sliding Menu */
+@media screen and (max-width: 1023px) {
+  body {
+    padding-top: 4rem !important; /* Offset padding for fixed navbar on mobile */
+  }
+
+  .navbar {
+    z-index: 1000 !important; /* Lifts navbar above body backdrop overlay */
+    min-height: 3.5rem !important;
+    padding: 0.25rem 0 !important;
+  }
+
+  .navbar-brand {
+    min-height: 3.5rem !important;
+    align-items: center !important;
+    display: flex !important;
+    padding: 0 0.75rem !important;
+    width: 100% !important;
+  }
+
+  .navbar-brand strong {
+    font-size: 1.2rem !important; /* Elegant branding size */
+    letter-spacing: -0.025em;
+  }
+
+  .navbar-burger {
+    height: 2.75rem !important; /* Compact design */
+    width: 2.75rem !important;
+    margin-left: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 260px;
+    max-width: 80%;
+    background-color: var(--background-color) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-left: 1px solid var(--footer-border);
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.15);
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: block !important; /* Force override Bulma default display none */
+    z-index: 1000;
+    padding: 3.5rem 1.25rem 1.25rem 1.25rem; /* Cozy mobile drawer padding */
+    overflow-y: auto;
+    visibility: hidden; /* Hide to prevent layout interaction issues when closed */
+  }
+  
+  .navbar-menu.is-active {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .navbar-menu .navbar-item {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--footer-border);
+  }
+
+  .navbar-menu .navbar-item:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-end {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Navbar Backdrop Overlay */
+.navbar-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-backdrop.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Prevent scroll when mobile drawer is open */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Position burger button above mobile menu drawer */
+.navbar-burger {
+  z-index: 1001;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  color: var(--heading-color) !important;
+  border-radius: 50%;
+}
+.navbar-burger span {
+  background-color: currentColor !important;
+}
+.navbar-burger:hover {
+  background-color: var(--tag-bg) !important;
+}
+.navbar-burger.is-active {
+  position: fixed;
+  right: 0.75rem;
+  top: 0.65rem;
+}
+
+/* Blog post card text overrides for theme support */
+.blog-post-card h3 {
+  color: var(--heading-color) !important;
+}
+.blog-post-card p {
+  color: var(--body-text-color) !important;
+}
+
+/* Accessibility overrides for text classes in dark mode */
+html[data-theme="dark"] .has-text-grey {
+  color: #94a3b8 !important; /* Lighter cool grey for contrast */
+}
+html[data-theme="dark"] .has-text-grey-dark {
+  color: #cbd5e1 !important; /* Highly readable light slate grey */
+}
+html[data-theme="dark"] .has-text-dark {
+  color: #ffffff !important; /* High contrast in dark mode */
+}
+
+/* Flexbox justification fallback utility */
+.is-justify-content-between {
+  justify-content: space-between !important;
+}
+
+/* Fix Bulma Icon Wrapper Overlap in Headings */
+.title .icon,
+.subtitle .icon,
+h1 .icon,
+h2 .icon,
+h3 .icon,
+h4 .icon,
+h5 .icon,
+h6 .icon {
+  width: auto !important;
+  height: auto !important;
+  display: inline-flex !important;
+  vertical-align: middle !important;
+  margin-right: 0.65rem !important;
+}
+
+.title .icon i,
+.subtitle .icon i,
+h1 .icon i,
+h2 .icon i,
+h3 .icon i,
+h4 .icon i,
+h5 .icon i,
+h6 .icon i {
+  vertical-align: baseline !important;
+}
+
+/* Premium Navigation Buttons & Icons */
+.navbar-end .buttons .button.is-text {
+  background-color: transparent !important;
+  border: none !important;
+  color: var(--body-text-color) !important;
+  padding: 0.5rem !important;
+  height: auto !important;
+  width: auto !important;
+  opacity: 0.8;
+  transition: opacity 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-end .buttons .button.is-text:hover {
+  opacity: 1;
+  color: var(--heading-color) !important;
+  transform: translateY(-1px);
+}
+
+.navbar-end .buttons .button.is-text:focus,
+.navbar-end .buttons .button.is-text:active {
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+/* Hero & Page Social Icons Lift Transitions */
+.social-links a.has-text-grey-dark,
+.column.content .is-flex a,
+.content .is-flex a {
+  color: var(--body-text-color) !important;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+html[data-theme="dark"] .social-links a.has-text-grey-dark {
+  color: #cbd5e1 !important; /* Lighter slate grey in dark mode */
+}
+
+.social-links a.has-text-grey-dark:hover,
+.column.content .is-flex a:hover,
+.content .is-flex a:hover {
+  opacity: 1;
+  color: var(--link-color) !important;
+  transform: translateY(-2px);
+}
+
+/* Mobile-First Scaling & Spacing Overrides */
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 2.5rem 1rem !important; /* more compact mobile padding */
+  }
+  
+  .box {
+    padding: 1.25rem !important; /* compact card padding */
+  }
+  
+  .title.is-1 {
+    font-size: 2rem !important;
+  }
+  
+  .title.is-2 {
+    font-size: 1.6rem !important;
+  }
+  
+  .title.is-3 {
+    font-size: 1.35rem !important;
+  }
+  
+  .title.is-4 {
+    font-size: 1.15rem !important;
+  }
+  
+  .title.is-5 {
+    font-size: 1.05rem !important;
+  }
+  
+  /* Timeline Mobile Spacing Refinements */
+  .timeline-item {
+    padding-left: 1.15rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  
+  .timeline-marker {
+    width: 8px !important;
+    height: 8px !important;
+    left: -5px !important;
+    top: 6px !important;
+  }
+}
+
+/* Research Stats Grid - Desktop First */
+.research-stats-container {
+  border-top: 1px dashed var(--hr-color);
+  border-bottom: 1px dashed var(--hr-color);
+  padding: 0.75rem 0;
+  margin: 1.5rem 0;
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.research-stats-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.research-stats-grid .stat-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+/* Vertical dividers on desktop */
+.research-stats-grid .stat-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background-color: var(--hr-color);
+}
+
+.research-stats-grid .stat-number {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--link-color);
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.02em;
+}
+
+.research-stats-grid .stat-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: var(--body-text-color);
+  opacity: 0.8;
+}
+
+/* Mobile responsive adjustments - Beautiful Card Layout */
+@media screen and (max-width: 768px) {
+  .research-stats-container {
+    background-color: var(--button-light-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1.25rem 1rem;
+    margin: 1.5rem 0;
+    box-shadow: var(--card-shadow);
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+  
+  .research-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .research-stats-grid .stat-item {
+    flex: none;
+    padding: 0.25rem;
+  }
+  
+  .research-stats-grid .stat-item:not(:last-child)::after {
+    right: -0.25rem;
+    background-color: var(--card-border);
+  }
+  
+  .research-stats-grid .stat-number {
+    font-size: 1.25rem;
+  }
+  
+  .research-stats-grid .stat-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.02em;
+  }
+}

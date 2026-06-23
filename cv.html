@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        if (savedTheme === 'dark') {
+          document.documentElement.classList.add('dark-theme');
+        }
+      })();
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kavya Agrawal | CV</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css?v=16">
+    <script defer src="https://use.fontawesome.com/releases/v6.5.2/js/all.js"></script>
+    <script src="./assets/js/navbar-burger.js"></script>
+
+      <!-- PWA & Favicon Metadata -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#2A7EFF">
+    <script src="./assets/js/pwa.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+        <a class="navbar-item" href="./index.html">
+          <strong>Kavya Agrawal</strong>
+        </a>
+        <div role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-main">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </div>
+      </div>
+      <div id="navbar-main" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="./index.html">Home</a>
+          <a class="navbar-item" href="./about.html">About</a>
+          <a class="navbar-item" href="./experience.html">Education & Experience</a>
+          <a class="navbar-item" href="./research.html">Research</a>
+          <a class="navbar-item" href="./projects.html">Projects</a>
+          <a class="navbar-item" href="./publications.html">Publications</a>
+          <a class="navbar-item" href="./research-notes.html">Research Notes</a>
+          <a class="navbar-item is-active" href="./cv.html">CV</a>
+          <a class="navbar-item" href="./contact.html">Contact</a>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-text" href="mailto:kavyaagrawal58@gmail.com" title="Email">
+                <span class="icon"><i class="fas fa-envelope"></i></span>
+              </a>
+              <a class="button is-text" href="https://www.linkedin.com/in/kavya-agrawal02/" target="_blank" title="LinkedIn">
+                <span class="icon"><i class="fab fa-linkedin"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-nine-tenths content">
+            <h1 class="title is-2 mb-5">Curriculum Vitae</h1>
+
+            <!-- Download Button Callout -->
+            <div class="box is-shadowless p-5 mb-6" style="text-align: center;">
+              <h3 class="title is-4 mb-2">Academic Curriculum Vitae</h3>
+              <p class="mb-4">Click below to download the complete PDF version of my CV containing full academic profiles and list of coursework.</p>
+              <!-- We assume they place their actual CV PDF as 'Kavya_Agrawal_CV.pdf' in their main folder later, which maps to our local asset -->
+              <a href="./Kavya_Agrawal_CV.pdf" class="button is-dark is-medium" download>
+                <span class="icon"><i class="fas fa-file-download"></i></span>
+                <span>Download CV (PDF)</span>
+              </a>
+            </div>
+
+            <!-- Short Academic Summary -->
+            <div class="mb-6">
+              <h2 class="title is-3 mb-3">Short Academic Summary</h2>
+              <p>
+                Currently a Ph.D. Scholar at the <strong>TERI School of Advanced Studies</strong>, New Delhi, India. I hold an M.A. in Geography from Dr. B.R. Ambedkar University (Agra) and a B.A. (Honors) in Geography from Shaheed Bhagat Singh College, University of Delhi. My expertise includes remote sensing, GIS application development, cloud computing on Google Earth Engine, and applying machine learning to model environmental hazards.
+              </p>
+            </div>
+
+            <!-- Research Areas -->
+            <div class="mb-6">
+              <h2 class="title is-3 mb-3">Research Areas</h2>
+              <div class="columns">
+                <div class="column">
+                  <ul>
+                    <li>Geogenic Groundwater Contaminants (Uranium, Fluoride, Arsenic)</li>
+                    <li>Geospatial Machine Learning & Predictive Modeling</li>
+                    <li>Population Exposure Risk Modelling</li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul>
+                    <li>High Mountain Asia Thermal Trends (LST)</li>
+                    <li>Himalayan Permafrost Boundaries Mapping</li>
+                    <li>Water Security Governance & Diagnostics</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Professional Links -->
+            <div>
+              <h2 class="title is-3 mb-4">Professional Portals</h2>
+              <div class="columns is-multiline">
+                <!-- Link 1 -->
+                <div class="column is-one-third">
+                  <div class="box is-shadowless p-4 has-text-centered" style="height: 100%;">
+                    <span class="icon has-text-dark mb-2" style="font-size: 2rem;"><i class="ai ai-google-scholar"></i></span>
+                    <h4 class="title is-6 mb-2">Google Scholar</h4>
+                    <a href="https://scholar.google.com/citations?user=yXQUQ6YAAAAJ&amp;hl=en" target="_blank" class="is-size-7">View Citations &rarr;</a>
+                  </div>
+                </div>
+                <!-- Link 2 -->
+                <div class="column is-one-third">
+                  <div class="box is-shadowless p-4 has-text-centered" style="height: 100%;">
+                    <span class="icon has-text-dark mb-2" style="font-size: 2rem;"><i class="ai ai-researchgate"></i></span>
+                    <h4 class="title is-6 mb-2">ResearchGate</h4>
+                    <a href="https://www.researchgate.net/profile/Kavya-Agrawal-4" target="_blank" class="is-size-7">View Contributions &rarr;</a>
+                  </div>
+                </div>
+                <!-- Link 3 -->
+                <div class="column is-one-third">
+                  <div class="box is-shadowless p-4 has-text-centered" style="height: 100%;">
+                    <span class="icon has-text-dark mb-2" style="font-size: 2rem;"><i class="ai ai-orcid"></i></span>
+                    <h4 class="title is-6 mb-2">ORCID</h4>
+                    <a href="https://orcid.org/0009-0009-1032-2541" target="_blank" class="is-size-7">View Record &rarr;</a>
+                  </div>
+                </div>
+                <!-- Link 4 -->
+                <div class="column is-one-third">
+                  <div class="box is-shadowless p-4 has-text-centered" style="height: 100%;">
+                    <span class="icon has-text-dark mb-2" style="font-size: 2rem;"><i class="fab fa-linkedin"></i></span>
+                    <h4 class="title is-6 mb-2">LinkedIn</h4>
+                    <a href="https://www.linkedin.com/in/kavya-agrawal02/" target="_blank" class="is-size-7">Connect on LinkedIn &rarr;</a>
+                  </div>
+                </div>
+                <!-- Link 5 -->
+                <div class="column is-one-third">
+                  <div class="box is-shadowless p-4 has-text-centered" style="height: 100%;">
+                    <span class="icon has-text-dark mb-2" style="font-size: 2rem;"><i class="fab fa-github"></i></span>
+                    <h4 class="title is-6 mb-2">GitHub</h4>
+                    <a href="https://github.com" target="_blank" class="is-size-7">View Code Repositories &rarr;</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container content has-text-centered is-size-7">
+        <p>
+          &copy; 2026 Kavya Agrawal. All rights reserved.
+        </p>
+        <div class="mt-2">
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="mx-1">
+            <i class="fab fa-creative-commons fa-lg"></i>
+            <i class="fab fa-creative-commons-by fa-lg"></i>
+            <i class="fab fa-creative-commons-nc fa-lg"></i>
+            <i class="fab fa-creative-commons-sa fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
