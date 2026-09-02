@@ -1,287 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <script>
-      (function() {
-        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        if (savedTheme === 'dark') {
-          document.documentElement.classList.add('dark-theme');
-        }
-      })();
-    </script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kavya Agrawal | Experience</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-    <link rel="stylesheet" href="./assets/css/styles.css?v=16">
-    <script defer src="https://use.fontawesome.com/releases/v6.5.2/js/all.js"></script>
-    <script src="./assets/js/navbar-burger.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Experience, Teaching & Engagement | Kavya Agrawal</title>
+  <meta name="description" content="Kavya Agrawal's teaching, academic engagement, training, field participation, service and education.">
+  <meta name="theme-color" content="#fffcfa">
+  <meta property="og:title" content="Experience, Teaching & Engagement | Kavya Agrawal">
+  <meta property="og:image" content="assets/images/kavya-portrait-formal.jpg">
+  <link rel="canonical" href="experience.html">
+  <link rel="icon" href="assets/images/favicon-32.png" sizes="32x32">
+  <link rel="stylesheet" href="assets/css/styles.css?v=34">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-site-header></header>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div data-reveal><h1>Experience,<br>teaching &amp;<br>engagement</h1><p class="section-lead">A research practice shaped by teaching, field engagement, sustainability programmes, professional training and science–policy dialogue.</p></div>
+        <div class="page-hero-portrait" data-reveal><img src="assets/images/kavya-portrait-formal.jpg" width="537" height="716" alt="Kavya Agrawal in a black blazer outdoors"></div>
+      </div>
+    </section>
 
-      <!-- PWA & Favicon Metadata -->
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
-    <link rel="manifest" href="./manifest.json">
-    <meta name="theme-color" content="#2A7EFF">
-    <script src="./assets/js/pwa.js" defer></script>
-  </head>
-  <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <section class="content-section section-peach">
       <div class="container">
-        <div class="navbar-brand">
-        <a class="navbar-item" href="./index.html">
-          <strong>Kavya Agrawal</strong>
-        </a>
-        <div role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-main">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+        <div class="content-block" data-reveal><h2>Recent academic engagement</h2><p class="section-lead">Verified activities from teaching, sustainability programmes, conferences and professional service.</p></div>
+        <div class="timeline" data-reveal>
+          <article class="timeline-item"><time class="timeline-year" datetime="2026-04">2026</time><span class="timeline-dot"></span><div class="timeline-copy"><h3>Best Paper Award</h3><p>ICSSR EHP NEXUS 2026 · Gautam Buddha University · 27–28 April</p></div></article>
+          <article class="timeline-item"><time class="timeline-year" datetime="2026-03">2026</time><span class="timeline-dot"></span><div class="timeline-copy"><h3>NRSC / ISRO Training Programme</h3><p>Volunteer and Rapporteur · 16–20 March</p></div></article>
+          <article class="timeline-item"><time class="timeline-year" datetime="2026">2026</time><span class="timeline-dot"></span><div class="timeline-copy"><h3>Programme LEAD</h3><p>Facilitator and Judge · sustainable city design challenge for Classes 9–12</p></div></article>
+          <article class="timeline-item"><time class="timeline-year" datetime="2026-02">2026</time><span class="timeline-dot"></span><div class="timeline-copy"><h3>WSDS and Water as a Commons</h3><p>World Sustainable Development Summit and water-governance working group · 25–27 February</p></div></article>
+          <article class="timeline-item"><time class="timeline-year" datetime="2025">2025</time><span class="timeline-dot"></span><div class="timeline-copy"><h3>MSc Geoinformatics teaching</h3><p>Principles of Remote Sensing (NRG169) · 32 practical hours · July–December</p></div></article>
+          <article class="timeline-item"><time class="timeline-year" datetime="2024-10">2024</time><span class="timeline-dot"></span><div class="timeline-copy"><h3>As2024 conference presentation</h3><p>Arsenic in the Environment · KIIT, Bhubaneswar · 20–24 October</p></div></article>
         </div>
       </div>
-      <div id="navbar-main" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item" href="./index.html">Home</a>
-          <a class="navbar-item" href="./about.html">About</a>
-          <a class="navbar-item is-active" href="./experience.html">Education & Experience</a>
-          <a class="navbar-item" href="./research.html">Research</a>
-          <a class="navbar-item" href="./projects.html">Projects</a>
-          <a class="navbar-item" href="./publications.html">Publications</a>
-          <a class="navbar-item" href="./research-notes.html">Research Notes</a>
-          <a class="navbar-item" href="./cv.html">CV</a>
-          <a class="navbar-item" href="./contact.html">Contact</a>
-        </div>
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-text" href="mailto:kavyaagrawal58@gmail.com" title="Email">
-                <span class="icon"><i class="fas fa-envelope"></i></span>
-              </a>
-              <a class="button is-text" href="https://www.linkedin.com/in/kavya-agrawal02/" target="_blank" title="LinkedIn">
-                <span class="icon"><i class="fab fa-linkedin"></i></span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </nav>
+    </section>
 
-    <!-- Main Section -->
-    <section class="section">
-      <div class="container">
-        <div class="columns is-centered">
-          <div class="column is-nine-tenths content">
-            <h1 class="title is-2 mb-6">Education & Experience</h1>
-
-            <!-- Education -->
-            <div class="mb-6">
-              <h2 class="title is-3 mb-4"><span class="icon mr-2"><i class="fas fa-graduation-cap"></i></span>Education</h2>
-              <div class="timeline mt-4">
-                <div class="timeline-item">
-                  <div class="timeline-marker"></div>
-                  <div class="is-flex is-justify-content-space-between is-flex-wrap-wrap">
-                    <h4 class="title is-5 mb-1">TERI School of Advanced Studies</h4>
-                    <span class="has-text-grey">2023 - Present</span>
-                  </div>
-                  <p class="subtitle is-6 mb-2"><strong>Ph.D. in Natural & Applied Sciences</strong></p>
-                  <p class="is-size-6">
-                    Research Area: Spatial modeling, remote sensing, and AI-driven frameworks for groundwater contamination and environmental risk assessment in India.
-                  </p>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-marker"></div>
-                  <div class="is-flex is-justify-content-space-between is-flex-wrap-wrap">
-                    <h4 class="title is-5 mb-1">Dr. B.R. Ambedkar University, Agra</h4>
-                    <span class="has-text-grey">2021 - 2023</span>
-                  </div>
-                  <p class="subtitle is-6 mb-2"><strong>Master of Arts in Geography</strong></p>
-                  <p class="is-size-6">
-                    Details: Completed with <strong>CGPA: 7.55 / 10</strong> (First division). Master's thesis on Land Surface Temperature (LST) variations and geospatial indices.
-                  </p>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-marker"></div>
-                  <div class="is-flex is-justify-content-space-between is-flex-wrap-wrap">
-                    <h4 class="title is-5 mb-1">University of Delhi (Shaheed Bhagat Singh College)</h4>
-                    <span class="has-text-grey">2018 - 2021</span>
-                  </div>
-                  <p class="subtitle is-6 mb-2"><strong>Bachelor of Arts (Honors) in Geography</strong></p>
-                  <p class="is-size-6">
-                    Details: Completed with <strong>CGPA: 7.86 / 10</strong> (First division). Focused on physical geography, cartography, and remote sensing methods.
-                  </p>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-marker"></div>
-                  <div class="is-flex is-justify-content-space-between is-flex-wrap-wrap">
-                    <h4 class="title is-5 mb-1">St. Francis Inter College, Hathras</h4>
-                    <span class="has-text-grey">2016 - 2018</span>
-                  </div>
-                  <p class="subtitle is-6 mb-2"><strong>Higher Secondary / Intermediate (CBSE)</strong></p>
-                  <p class="is-size-6">
-                    Academic stream: Science. Focus on core sciences and mathematics with high honors.
-                  </p>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-marker"></div>
-                  <div class="is-flex is-justify-content-space-between is-flex-wrap-wrap">
-                    <h4 class="title is-5 mb-1">Delhi Public School, Aligarh</h4>
-                    <span class="has-text-grey">2014 - 2016</span>
-                  </div>
-                  <p class="subtitle is-6 mb-2"><strong>Secondary School / Matriculation (CBSE)</strong></p>
-                  <p class="is-size-6">
-                    Matriculated with top academic honors. Active participant in national science congresses.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Research Experience -->
-            <div class="mb-6">
-              <h2 class="title is-3 mb-4"><span class="icon mr-2"><i class="fas fa-microscope"></i></span>Research Experience</h2>
-              
-              <div class="box is-shadowless mb-4">
-                <div class="is-flex is-justify-content-space-between is-flex-wrap-wrap">
-                  <h4 class="title is-5 mb-1">Graduate Research Assistant / PhD Scholar</h4>
-                  <span class="has-text-grey">Sep 2023 - Present</span>
-                </div>
-                <p class="subtitle is-6 mb-2"><em>TERI School of Advanced Studies, New Delhi</em></p>
-                <p class="is-size-6">
-                  Conducting PhD research on groundwater uranium, fluoride, and arsenic contamination modeling across India. Key tasks include data integration, statistical spatial analytics, machine learning benchmarking, and drafting research papers.
-                </p>
-              </div>
-
-              <div class="box is-shadowless mb-4">
-                <div class="is-flex is-justify-content-space-between is-flex-wrap-wrap">
-                  <h4 class="title is-5 mb-1">Geospatial Analyst (Indus Basin LST Project)</h4>
-                  <span class="has-text-grey">Feb 2023 - Oct 2023</span>
-                </div>
-                <p class="subtitle is-6 mb-2"><em>Collaborative Academic Project</em></p>
-                <p class="is-size-6">
-                  Analyzed spatial and elevation-wise daytime/nighttime LST trends across the Indus River Basin using MODIS satellite observations. Coded automated analysis scripts in Google Earth Engine and verified findings using time-series trend estimators.
-                </p>
-              </div>
-
-              <div class="box is-shadowless">
-                <div class="is-flex is-justify-content-space-between is-flex-wrap-wrap">
-                  <h4 class="title is-5 mb-1">Project Scholar (Permafrost & Cryosphere Studies)</h4>
-                  <span class="has-text-grey">Nov 2023 - Present</span>
-                </div>
-                <p class="subtitle is-6 mb-2"><em>Collaborative Research Group</em></p>
-                <p class="is-size-6">
-                  Applying thermal indices and spatial estimators (MAAT, PISR, BMAT) to map and track permafrost boundaries in High Mountain Asia under climate change.
-                </p>
-              </div>
-            </div>
-
-            <!-- Teaching Experience -->
-            <div class="mb-6">
-              <h2 class="title is-3 mb-4"><span class="icon mr-2"><i class="fas fa-chalkboard-teacher"></i></span>Teaching Experience</h2>
-              <ul>
-                <li>
-                  <strong>Teaching Assistant - Cartography & GIS:</strong> Assisted faculty at TERI SAS in preparing and conducting laboratory sessions on thematic mapping and QGIS fundamentals for post-graduate students.
-                </li>
-                <li>
-                  <strong>GEE Hands-on Workshops:</strong> Organized peer workshops on scripting in Google Earth Engine for hydrological applications, showing students how to import and query Sentinel/Landsat collections.
-                </li>
-              </ul>
-            </div>
-
-            <!-- Internships -->
-            <div class="mb-6">
-              <h2 class="title is-3 mb-4"><span class="icon mr-2"><i class="fas fa-briefcase"></i></span>Internships & Field Experience</h2>
-              <ul>
-                <li>
-                  <strong>Field Survey Intern - Delhi Water Network Analysis:</strong> Conducted door-to-door water availability surveys, checked groundwater samples, and compiled municipal water supply data in selected districts of New Delhi to evaluate the feasibility of 24/7 continuous supply.
-                </li>
-                <li>
-                  <strong>Geospatial Data Intern:</strong> Worked on digitizing base maps, georeferencing historical maps, and compiling LULC datasets for urban sprawl monitoring at Shaheed Bhagat Singh College.
-                </li>
-              </ul>
-            </div>
-
-            <!-- Awards & Honors -->
-            <div class="mb-6">
-              <h2 class="title is-3 mb-4"><span class="icon mr-2"><i class="fas fa-trophy"></i></span>Awards & Honors</h2>
-              <ul>
-                <li><strong>PhD Fellowship:</strong> Full research fellowship awarded by TERI School of Advanced Studies (2023 - Present).</li>
-                <li><strong>State Child Scientist Award:</strong> National Science Congress (2018).</li>
-                <li><strong>Consecutive Top 3 Ranks:</strong> English Olympiads by British Olympiad Foundation (2015-2018).</li>
-                <li><strong>Academic Merit Awards:</strong> Awarded for securing top ranks during senior secondary education (2016, 2018).</li>
-              </ul>
-            </div>
-
-            <!-- Conferences -->
-            <div class="mb-6">
-              <h2 class="title is-3 mb-4"><span class="icon mr-2"><i class="fas fa-users"></i></span>Conferences</h2>
-              <ul>
-                <li>
-                  <strong>Paper Presentation:</strong> "Elevation-wise daytime/nighttime LST trends in HMA," presented at the International Geography Conference (New Delhi, 2023).
-                </li>
-                <li>
-                  <strong>Poster Presentation:</strong> "AI-driven mapping of groundwater uranium risk in Indo-Gangetic aquifers," presented at the Annual Environmental Science Conference (New Delhi, 2024).
-                </li>
-              </ul>
-            </div>
-
-            <!-- Workshops & Training -->
-            <div class="mb-6">
-              <h2 class="title is-3 mb-4"><span class="icon mr-2"><i class="fas fa-certificate"></i></span>Workshops & Training</h2>
-              <ul>
-                <li><strong>Advanced GEE Training:</strong> Completed 2-week course on planetary cloud computing for spatial diagnostics (2023).</li>
-                <li><strong>Machine Learning in Hydrology:</strong> Workshop on applying scikit-learn and geospatial Python packages for groundwater modeling (2023).</li>
-                <li><strong>Disaster Risk Management and Community CCDRR:</strong> 1-week certification workshop focused on flood and climate adaptation frameworks (2021).</li>
-              </ul>
-            </div>
-
-            <!-- Positions of Responsibility & Service -->
-            <div>
-              <h2 class="title is-3 mb-4"><span class="icon mr-2"><i class="fas fa-hand-holding-heart"></i></span>Positions of Responsibility & Service</h2>
-              <ul>
-                <li>
-                  <strong>Volunteer</strong> at SWAPO NGO (2016 - 2023): Engaged in community development projects, child education support, and environmental awareness campaigns.
-                </li>
-                <li>
-                  <strong>Editor-in-Chief</strong> at Geography Association, DU (2018 - 2021): Led the editorial board, managed student writers, and curated geographical news columns.
-                </li>
-                <li>
-                  <strong>Magazine Coordinator & English Editor</strong> at Vani, Shaheed Bhagat Singh College, DU (2018 - 2020): Coordinated annual publications, selected articles, and proofread academic translations.
-                </li>
-                <li>
-                  <strong>Coordination of Volunteers</strong> at Vasundhara (2018 - 2019): Managed volunteer groups for campus greening and waste recycling campaigns.
-                </li>
-                <li>
-                  <strong>Personal Blogger & Content Writer</strong> (2018 - 2023): Authored blogs on geographical facts, GIS tutorials, and environmental data stories.
-                </li>
-              </ul>
-            </div>
-
+    <section class="content-section">
+      <div class="container content-grid">
+        <aside class="content-aside" data-reveal><strong>Teaching</strong><p>Applied instruction connects remote-sensing concepts with practical geospatial workflows.</p></aside>
+        <div class="content-block" data-reveal>
+          <h2>Teaching and facilitation</h2>
+          <div class="open-grid">
+            <div class="open-column"><h3>Remote sensing</h3><p>Delivered 32 practical learning hours for Principles of Remote Sensing within the MSc Geoinformatics programme at TERI SAS.</p></div>
+            <div class="open-column"><h3>Programme LEAD</h3><p>Facilitated and judged a sustainable-city design challenge for students in Classes 9–12.</p></div>
+            <div class="open-column"><h3>Communication</h3><p>Experience in scientific communication, reporting, academic coordination and interdisciplinary collaboration.</p></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container content has-text-centered is-size-7">
-        <p>
-          &copy; 2026 Kavya Agrawal. All rights reserved.
-        </p>
-        <div class="mt-2">
-          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="mx-1">
-            <i class="fab fa-creative-commons fa-lg"></i>
-            <i class="fab fa-creative-commons-by fa-lg"></i>
-            <i class="fab fa-creative-commons-nc fa-lg"></i>
-            <i class="fab fa-creative-commons-sa fa-lg"></i>
-          </a>
+    <section class="content-section section-blush">
+      <div class="container content-grid">
+        <aside class="content-aside" data-reveal><strong>Field and policy</strong><p>Participation spans water governance, sustainability dialogue, rapporteurship and field-based learning.</p></aside>
+        <div class="content-block" data-reveal>
+          <h2>Field and professional engagement</h2>
+          <div class="record-grid">
+            <article class="record-block"><h3>NRSC / ISRO</h3><p>Volunteer and rapporteur for a professional training programme held 16–20 March 2026.</p></article>
+            <article class="record-block"><h3>Water as a Commons</h3><p>Participation in a water-governance working group alongside WSDS, 26–27 February 2026.</p></article>
+            <article class="record-block"><h3>Yamuna field engagement</h3><p>Field-based engagement with INTACH connecting river landscapes, heritage and environmental observation.</p></article>
+            <article class="record-block"><h3>Science–policy dialogue</h3><p>Rapporteurship and documentation experience across sustainability and multilateral policy sessions.</p></article>
+          </div>
         </div>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <section class="content-section">
+      <div class="container content-grid">
+        <aside class="content-aside" data-reveal><strong>Training and capacity building</strong><p>Selected programmes and workshops listed in the supplied academic résumé.</p></aside>
+        <div class="content-block" data-reveal>
+          <h2>Professional development</h2>
+          <div class="event-list">
+            <article class="event-row"><time datetime="2025-08">5–7 Aug 2025</time><div><h3>QGreenland Educator Workshop</h3><p>Virtual workshop focused on developing educational activities using QGreenland data.</p></div></article>
+            <article class="event-row"><time datetime="2024-12">10–12 Dec 2024</time><div><h3>Capacity Building Workshop on UAV/Drone Applications</h3><p>Applications in agriculture and natural-resource management at TERI SAS with collaborating institutions.</p></div></article>
+            <article class="event-row"><time datetime="2024-11">18 Nov–7 Dec 2024</time><div><h3>Winter School in Geospatial Science and Technology</h3><p>Twenty-one-day programme supported by the National Geospatial Program, DST, Government of India.</p></div></article>
+            <article class="event-row"><time datetime="2024-03">11–15 Mar 2024</time><div><h3>Geospatial Technology for Forest Fire Disaster Management</h3><p>One-week capacity-building programme covering mapping, monitoring and mitigation.</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section section-lilac">
+      <div class="container content-grid">
+        <aside class="content-aside" data-reveal><strong>Education</strong><p>Geography provides the foundation for a research practice spanning environmental data, water and governance.</p></aside>
+        <div class="content-block" data-reveal>
+          <h2>Academic foundation</h2>
+          <div class="education-grid">
+            <div class="education-item"><h3>PhD Scholar</h3><p>Natural &amp; Applied Sciences · TERI School of Advanced Studies, New Delhi</p></div>
+            <div class="education-item"><h3>MA Geography</h3><p>Dr B.R. Ambedkar University · 2021–2023</p></div>
+            <div class="education-item"><h3>BA (Honors) Geography</h3><p>University of Delhi · 2018–2021</p></div>
+          </div>
+          <div class="event-list">
+            <article class="event-row"><time datetime="2016">2016–2018</time><div><h3>Senior Secondary School</h3><p>Delhi Public School, Aligarh.</p></div></article>
+            <article class="event-row"><time datetime="2014">2014–2016</time><div><h3>Secondary School</h3><p>St. Francis Inter College, Hathras.</p></div></article>
+          </div>
+          <div class="button-row"><a class="button button-primary" href="cv.html">View academic CV</a><a class="button" href="contact.html">Contact Kavya</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" data-site-footer></footer>
+  <script src="assets/js/site.js?v=34" defer></script>
+</body>
 </html>

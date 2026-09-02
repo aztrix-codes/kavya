@@ -1,251 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <script>
-      (function() {
-        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        if (savedTheme === 'dark') {
-          document.documentElement.classList.add('dark-theme');
-        }
-      })();
-    </script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kavya Agrawal | Research</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-    <link rel="stylesheet" href="./assets/css/styles.css?v=16">
-    <script defer src="https://use.fontawesome.com/releases/v6.5.2/js/all.js"></script>
-    <script src="./assets/js/navbar-burger.js"></script>
-
-      <!-- PWA & Favicon Metadata -->
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
-    <link rel="manifest" href="./manifest.json">
-    <meta name="theme-color" content="#2A7EFF">
-    <script src="./assets/js/pwa.js" defer></script>
-  </head>
-  <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="container">
-        <div class="navbar-brand">
-        <a class="navbar-item" href="./index.html">
-          <strong>Kavya Agrawal</strong>
-        </a>
-        <div role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-main">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research | Kavya Agrawal</title>
+  <meta name="description" content="Kavya Agrawal's PhD research in groundwater contamination, environmental geoinformatics, Earth observation, spatial machine learning, validation and explainable AI.">
+  <meta name="theme-color" content="#fffcfa">
+  <meta property="og:title" content="Research | Kavya Agrawal">
+  <meta property="og:description" content="From environmental observations to contamination probability, exposure and governance.">
+  <meta property="og:image" content="assets/images/kavya-portrait-formal.jpg">
+  <link rel="canonical" href="research.html">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/images/favicon-32.png" sizes="32x32">
+  <link rel="stylesheet" href="assets/css/styles.css?v=34">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-site-header></header>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div data-reveal>
+          <h1>Research</h1>
+          <p class="section-lead">An integrated PhD framework linking environmental observations, Earth observation, geospatial analysis and AI with exposure, monitoring and environmental governance.</p>
         </div>
+        <aside class="content-aside" data-reveal>
+          <strong>The research chain</strong>
+          <p>Observe → integrate → model → validate → explain → expose → govern.</p>
+          <p class="notice">All developing research streams are labelled by status; no unpublished finding is presented as established evidence.</p>
+        </aside>
       </div>
-      <div id="navbar-main" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item" href="./index.html">Home</a>
-          <a class="navbar-item" href="./about.html">About</a>
-          <a class="navbar-item" href="./experience.html">Education & Experience</a>
-          <a class="navbar-item is-active" href="./research.html">Research</a>
-          <a class="navbar-item" href="./projects.html">Projects</a>
-          <a class="navbar-item" href="./publications.html">Publications</a>
-          <a class="navbar-item" href="./research-notes.html">Research Notes</a>
-          <a class="navbar-item" href="./cv.html">CV</a>
-          <a class="navbar-item" href="./contact.html">Contact</a>
-        </div>
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-text" href="mailto:kavyaagrawal58@gmail.com" title="Email">
-                <span class="icon"><i class="fas fa-envelope"></i></span>
-              </a>
-              <a class="button is-text" href="https://www.linkedin.com/in/kavya-agrawal02/" target="_blank" title="LinkedIn">
-                <span class="icon"><i class="fab fa-linkedin"></i></span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </nav>
+    </section>
 
-    <!-- Main Section -->
-    <section class="section">
-      <div class="container">
-        <div class="columns is-centered">
-          <div class="column is-nine-tenths content">
-            <h1 class="title is-2 mb-6">Research Themes</h1>
-
-            <!-- Theme 1 -->
-            <div id="theme1" class="mb-6 pt-4">
-              <h2 class="title is-3 mb-3">Theme 1: Groundwater Contamination</h2>
-              <div class="box is-shadowless p-5">
-                <h4 class="title is-5 mb-2">Overview</h4>
-                <p>
-                  High concentrations of toxic geogenic elements—primarily uranium, fluoride, and arsenic—in drinking water systems pose severe health hazards to millions in India. This theme investigates the hydrogeochemical controls, spatial distribution, and release pathways of these toxic contaminants.
-                </p>
-                <h4 class="title is-5 mb-2">Key Questions</h4>
-                <ul>
-                  <li>What environmental, geomorphological, and mineralogical variables control the release of contaminants into alluvial and crystalline aquifers?</li>
-                  <li>Can we accurately predict pollution levels in unsampled geographical blocks?</li>
-                </ul>
-                <h4 class="title is-5 mb-2">Methods</h4>
-                <p>
-                  We compile extensive groundwater chemical data and couple them with spatial predictive algorithms (e.g., Random Forest, XGBoost, Support Vector Machines) and interpretability libraries like SHAP (Shapley Additive exPlanations).
-                </p>
-                <h4 class="title is-5 mb-2">Datasets</h4>
-                <p>
-                  Central Ground Water Board (CGWB) chemical logs, soil chemistry indices, gridded geological profiles, and meteorological records.
-                </p>
-                <h4 class="title is-5 mb-2">Outputs & Research Maps</h4>
-                <p>
-                  High-resolution probability and hazard risk maps depicting groundwater contamination hotspots across selected states in India.
-                </p>
-              </div>
-            </div>
-
-            <hr class="my-6">
-
-            <!-- Theme 2 -->
-            <div id="theme2" class="mb-6 pt-4">
-              <h2 class="title is-3 mb-3">Theme 2: Geospatial AI & Machine Learning</h2>
-              <div class="box is-shadowless p-5">
-                <h4 class="title is-5 mb-2">Overview</h4>
-                <p>
-                  Applying artificial intelligence and statistical learning to environmental remote sensing datasets. This work bridges the gap between raw planetary observations and physical hydrological outcomes.
-                </p>
-                <h4 class="title is-5 mb-2">Methods</h4>
-                <p>
-                  Applying convolutional neural networks (CNNs), spatial neural networks, regression-kriging, and multi-sensor data fusion.
-                </p>
-                <h4 class="title is-5 mb-2">Applications</h4>
-                <p>
-                  Hotspot predicting, model benchmarking under aquifer heterogeneity, and mapping spatial uncertainty boundaries.
-                </p>
-              </div>
-            </div>
-
-            <hr class="my-6">
-
-            <!-- Theme 3 -->
-            <div id="theme3" class="mb-6 pt-4">
-              <h2 class="title is-3 mb-3">Theme 3: Environmental Health & Exposure Assessment</h2>
-              <div class="box is-shadowless p-5">
-                <h4 class="title is-5 mb-2">Overview</h4>
-                <p>
-                  Quantifying population-level exposure risks associated with environmental toxins.
-                </p>
-                <h4 class="title is-5 mb-2">Methods</h4>
-                <p>
-                  Integrating population census maps, demographic dynamics, and contamination probability layers inside GIS environments to calculate regional hazard index (HI) values.
-                </p>
-                <h4 class="title is-5 mb-2">Applications</h4>
-                <p>
-                  Estimating toxic ingestion dosages, locating vulnerable rural segments, and guiding public health monitoring efforts.
-                </p>
-              </div>
-            </div>
-
-            <hr class="my-6">
-
-            <!-- Theme 4 -->
-            <div id="theme4" class="mb-6 pt-4">
-              <h2 class="title is-3 mb-3">Theme 4: Policy Diagnostics & Governance Assessment</h2>
-              <div class="box is-shadowless p-5">
-                <h4 class="title is-5 mb-2">Overview</h4>
-                <p>
-                  Investigating institutional frameworks and designing environmental governance diagnostics to improve municipal supplies.
-                </p>
-                <h4 class="title is-5 mb-2">Methods</h4>
-                <p>
-                  Applying municipal water balance models, socio-economic survey surveys, and analyzing local policy mandates.
-                </p>
-                <h4 class="title is-5 mb-2">Applications</h4>
-                <p>
-                  Feasibility audits of 24/7 continuous supply in metropolitan Delhi and mitigating light pollution in critical sanctuaries.
-                </p>
-              </div>
-            </div>
-
-            <hr class="my-6">
-
-            <!-- Theme 5 -->
-            <div id="theme5" class="mb-6 pt-4">
-              <h2 class="title is-3 mb-3">Theme 5: Cryosphere, Climate & Hydrology</h2>
-              <div class="box is-shadowless p-5">
-                <h4 class="title is-5 mb-2">Overview</h4>
-                <p>
-                  Tracking rapid changes in High Mountain Asia's glaciers, seasonal snow cover, and permafrost distributions under changing climate cycles.
-                </p>
-                <h4 class="title is-5 mb-2">Methods</h4>
-                <p>
-                  Mann-Kendall Trend test, Theil-Sen's slope analysis, and computing thermal indices (MAAT, PISR, BMAT) over 20-year MODIS time-series.
-                </p>
-                <h4 class="title is-5 mb-2">Applications</h4>
-                <p>
-                  Mapping spatial permafrost boundaries in the Indus River Basin, tracking snow cover Dynamics, and charting elevation-wise LST changes.
-                </p>
-              </div>
-            </div>
-
-            <hr class="my-6">
-
-            <!-- Map & Figure Gallery Section -->
-            <div class="mb-6">
-              <h2 class="title is-3 mb-4"><span class="icon mr-2"><i class="fas fa-images"></i></span>Map & Figure Gallery</h2>
-              <p class="has-text-grey-dark mb-4">
-                Selected map outputs and data visualizations from our research papers and ongoing projects:
-              </p>
-              
-              <div class="gallery-grid">
-                <!-- Gallery Item 1 -->
-                <div class="gallery-card">
-                  <a href="./assets/images/projects/project7.png" target="_blank">
-                    <img src="./assets/images/projects/project7.png" alt="Thermal Distribution and Permafrost Mapping">
-                  </a>
-                  <div class="gallery-card-content">
-                    <h4 class="title is-6 mb-1">Himalayan Cryospheric Extent</h4>
-                    <p class="is-size-7 has-text-grey-dark mb-0">
-                      Calculated Mean Annual Air Temperature (MAAT) and snow cover estimates used to model permafrost boundaries.
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Gallery Item 2 -->
-                <div class="gallery-card">
-                  <a href="./assets/images/projects/project6.png" target="_blank">
-                    <img src="./assets/images/projects/project6.png" alt="Land Surface Temperature Trends Analysis">
-                  </a>
-                  <div class="gallery-card-content">
-                    <h4 class="title is-6 mb-1">Indus Basin LST Trends</h4>
-                    <p class="is-size-7 has-text-grey-dark mb-0">
-                      Elevation-wise daytime/nighttime MODIS LST trends from 2000 to 2020, showing thermal divergence.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+    <section class="content-section">
+      <div class="container content-grid">
+        <aside class="content-aside" data-reveal>
+          <strong>PhD focus</strong>
+          <dl>
+            <dt>Domain</dt><dd>Groundwater quality and environmental geoinformatics</dd>
+            <dt>Scale</dt><dd>National, regional and multi-resolution</dd>
+            <dt>Decision context</dt><dd>Exposure, monitoring adequacy and governance priority</dd>
+          </dl>
+        </aside>
+        <div class="content-block" data-reveal>
+          <h2>From prediction to decision support</h2>
+          <p>The research is designed as a connected system rather than a collection of isolated maps. Observed contaminant values and multi-source environmental predictors are integrated in a reproducible geospatial workflow. Models are evaluated through independent validation, spatial robustness and explainability before predictions are connected to population exposure and monitoring adequacy.</p>
+          <p>This framing keeps uncertainty visible and treats governance as a research output: not simply where contamination is predicted, but where the combination of severity, exposure, settlement transition and insufficient monitoring should inform attention.</p>
+          <div class="process-band" aria-label="Research workflow">
+            <span>Observations</span><span>→</span><span>Multi-source data</span><span>→</span><span>Spatial modelling</span><span>→</span><span>Validation</span><span>→</span><span>Explainability</span><span>→</span><span>Governance</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container content has-text-centered is-size-7">
-        <p>
-          &copy; 2026 Kavya Agrawal. All rights reserved.
-        </p>
-        <div class="mt-2">
-          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="mx-1">
-            <i class="fab fa-creative-commons fa-lg"></i>
-            <i class="fab fa-creative-commons-by fa-lg"></i>
-            <i class="fab fa-creative-commons-nc fa-lg"></i>
-            <i class="fab fa-creative-commons-sa fa-lg"></i>
-          </a>
+    <section class="content-section section-blush">
+      <div class="container">
+        <div class="content-block" data-reveal>
+          <h2>Four connected research streams</h2>
+          <p class="section-lead">Each stream has a distinct data and methodological challenge while contributing to one broader groundwater-contamination framework.</p>
+        </div>
+        <div class="research-streams" data-reveal>
+          <article class="research-stream">
+            <span class="status">In progress</span>
+            <h3>Uranium contamination assessment</h3>
+            <p>Approximately 16,756 monitoring locations are combined with about 57 environmental predictors. A separate set of approximately 494 samples supports independent validation. Outputs include contamination probability, risk and transition zones, exposure screening, monitoring adequacy and governance priority.</p>
+          </article>
+          <article class="research-stream">
+            <span class="status">In progress</span>
+            <h3>Fluoride spatial modelling</h3>
+            <p>Data preparation begins with 72,024 original records and 28,185 spatially unique records; 26,718 contain values and 1,467 are missing. The work compares resampling and resolution choices and investigates deep-learning approaches without presenting preliminary outcomes as final results.</p>
+          </article>
+          <article class="research-stream">
+            <span class="status status-developing">Developing</span>
+            <h3>Arsenic modelling and XAI</h3>
+            <p>The arsenic direction focuses on temporal transferability, robustness and nonlinear interpretation. SHAP and LIME are considered alongside temporal mismatch so model explanations can be judged for stability and decision relevance.</p>
+          </article>
+          <article class="research-stream">
+            <span class="status status-method">Methodological study</span>
+            <h3>Spatial downscaling</h3>
+            <p>A Punjab pilot uses CHIRPS rainfall from 2013–2022. Original rainfall resolution is approximately 0.05° / 5.6 km; planned outputs include 5 km, 1 km and 500 m, with predictor datasets at 25, 9, 5, 1 and 0.5 km.</p>
+          </article>
         </div>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <section class="content-section">
+      <div class="container content-grid">
+        <aside class="content-aside" data-reveal>
+          <strong>Validation questions</strong>
+          <p>Does spatial structure survive resampling? Does the model generalise beyond a random split? Are explanations stable across time and space?</p>
+        </aside>
+        <div class="content-block" data-reveal>
+          <h2>Methods and validation</h2>
+          <div class="open-grid">
+            <div class="open-column"><h3>Geospatial analysis</h3><ul class="plain-list"><li>Remote sensing and GIS</li><li>Google Earth Engine</li><li>Multi-resolution processing</li><li>Spatial databases</li><li>Spatial statistics</li></ul></div>
+            <div class="open-column"><h3>Modelling</h3><ul class="plain-list"><li>Random Forest</li><li>Classification and regression</li><li>Deep learning</li><li>AutoML / AutoGluon</li><li>Feature importance</li></ul></div>
+            <div class="open-column"><h3>Robustness</h3><ul class="plain-list"><li>Independent validation</li><li>Temporal transferability</li><li>Moran’s I and semivariograms</li><li>Aggregation checks</li><li>SHAP and LIME</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section section-lilac">
+      <div class="container content-grid">
+        <aside class="content-aside" data-reveal>
+          <strong>Data provenance</strong>
+          <p>Multi-source environmental predictors are selected for interpretable relationships with hydrology, land cover, climate, terrain and human pressure.</p>
+        </aside>
+        <div class="content-block" data-reveal>
+          <h2>Environmental data ecosystem</h2>
+          <p>The framework brings together satellite, reanalysis, hydrological, terrain, settlement and population datasets while retaining their different temporal and spatial resolutions.</p>
+          <div class="data-cloud" aria-label="Datasets used in research">
+            <span>MODIS LST</span><span>MODIS NDVI / EVI</span><span>CHIRPS</span><span>IMD</span><span>ERA5-Land</span><span>GLDAS</span><span>GRACE</span><span>JRC Global Surface Water</span><span>GHSL / SMOD</span><span>GPWv4</span><span>OpenLandMap</span><span>SRTM</span><span>Human modification</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container content-grid">
+        <aside class="content-aside" data-reveal><strong>Research fit</strong><p>Environmental AI · Geospatial AI · Earth observation · Hydroinformatics · Groundwater · Environmental health · Spatial statistics · Governance.</p></aside>
+        <div class="content-block" data-reveal>
+          <h2>Research directions and collaboration</h2>
+          <p>The work is relevant to laboratories and teams working in environmental AI, geospatial intelligence, hydroinformatics, groundwater quality, environmental data science, climate–water interactions, environmental health, spatial statistics, digital water and sustainability governance.</p>
+          <div class="button-row"><a class="button button-primary" href="projects.html">View current projects</a><a class="button" href="contact.html">Discuss collaboration</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" data-site-footer></footer>
+  <script src="assets/js/site.js?v=34" defer></script>
+</body>
 </html>

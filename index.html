@@ -1,566 +1,294 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <script>
-            (function () {
-                const savedTheme =
-                    localStorage.getItem("theme") ||
-                    (window.matchMedia("(prefers-color-scheme: dark)").matches
-                        ? "dark"
-                        : "light");
-                document.documentElement.setAttribute("data-theme", savedTheme);
-                if (savedTheme === "dark") {
-                    document.documentElement.classList.add("dark-theme");
-                }
-            })();
-        </script>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Kavya Agrawal | Home</title>
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
-        />
-        <link rel="stylesheet" href="./assets/css/styles.css?v=16" />
-        <script
-            defer
-            src="https://use.fontawesome.com/releases/v6.5.2/js/all.js"
-        ></script>
-        <script src="./assets/js/navbar-burger.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kavya Agrawal | Environmental Geoinformatics Researcher</title>
+  <meta name="description" content="Kavya Agrawal is a PhD researcher at TERI School of Advanced Studies working across groundwater contamination, Earth observation, geospatial AI, exposure and environmental governance.">
+  <meta name="theme-color" content="#fffcfa">
+  <meta property="og:title" content="Kavya Agrawal | Environmental Geoinformatics Researcher">
+  <meta property="og:description" content="AI- and Earth-observation-based frameworks for groundwater contamination, exposure analysis and environmental governance.">
+  <meta property="og:type" content="profile">
+  <meta property="og:image" content="assets/images/kavya-portrait-hero.jpg">
+  <link rel="canonical" href="index.html">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/images/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css?v=34">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kavya Agrawal",
+    "jobTitle": "PhD Scholar",
+    "email": "mailto:kavya.agrawal@terisas.ac.in",
+    "affiliation": {"@type": "CollegeOrUniversity", "name": "TERI School of Advanced Studies"},
+    "knowsAbout": ["Environmental geoinformatics", "Groundwater contamination", "Earth observation", "Geospatial artificial intelligence", "Environmental governance"],
+    "sameAs": [
+      "https://scholar.google.com/citations?user=yXQUQ6YAAAAJ&hl=en",
+      "https://orcid.org/0009-0009-1032-2541",
+      "https://www.researchgate.net/profile/Kavya-Agrawal-4",
+      "https://www.linkedin.com/in/kavya-agrawal02/"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-site-header></header>
 
-        <!-- PWA & Favicon Metadata -->
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="./assets/images/favicon-16.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./assets/images/favicon-32.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="./assets/images/apple-touch-icon.png"
-        />
-        <link rel="manifest" href="./manifest.json" />
-        <meta name="theme-color" content="#2A7EFF" />
-        <script src="./assets/js/pwa.js" defer></script>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-copy" data-reveal>
+          <h1 id="hero-title">Kavya Agrawal</h1>
+          <p class="hero-role">PhD Scholar · TERI School of Advanced Studies, New Delhi</p>
+          <p class="hero-summary">Environmental geoinformatics researcher developing AI- and Earth-observation-based frameworks for groundwater contamination, exposure analysis, and environmental governance.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#research">Explore research</a>
+            <a class="button" href="output/pdf/Kavya_Agrawal_Academic_CV.pdf" download>Download CV</a>
+          </div>
+          <a class="hero-email" href="mailto:kavya.agrawal@terisas.ac.in">kavya.agrawal@terisas.ac.in</a>
+        </div>
+        <div class="portrait-shell" data-reveal>
+          <img src="assets/images/kavya-portrait-hero.jpg" width="499" height="484" alt="Kavya Agrawal outdoors in a navy blazer" fetchpriority="high">
+        </div>
+      </div>
+      <div class="hero-next">
+        <div class="hero-next-inner">
+          <span class="section-number">01</span>
+          <div>
+            <h2>Research that connects prediction to public decisions</h2>
+            <p class="process-inline">Observe → Model → Validate → Explain → Govern</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    </head>
-    <body>
-        <!-- Navigation Bar -->
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="container">
-                <div class="navbar-brand">
-                    <a class="navbar-item" href="./index.html">
-                        <strong>Kavya Agrawal</strong>
-                    </a>
-                    <div
-                        role="button"
-                        class="navbar-burger burger"
-                        aria-label="menu"
-                        aria-expanded="false"
-                        data-target="navbar-main"
-                    >
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                    </div>
-                </div>
-                <div id="navbar-main" class="navbar-menu">
-                    <div class="navbar-start">
-                        <a class="navbar-item is-active" href="./index.html"
-                            >Home</a
-                        >
-                        <a class="navbar-item" href="./about.html">About</a>
-                        <a class="navbar-item" href="./experience.html"
-                            >Education & Experience</a
-                        >
-                        <a class="navbar-item" href="./research.html"
-                            >Research</a
-                        >
-                        <a class="navbar-item" href="./projects.html"
-                            >Projects</a
-                        >
-                        <a class="navbar-item" href="./publications.html"
-                            >Publications</a
-                        >
-                        <a class="navbar-item" href="./research-notes.html"
-                            >Research Notes</a
-                        >
-                        <a class="navbar-item" href="./cv.html">CV</a>
-                        <a class="navbar-item" href="./contact.html">Contact</a>
-                    </div>
-                    <div class="navbar-end">
-                        <div class="navbar-item">
-                            <div class="buttons">
-                                <a
-                                    class="button is-text"
-                                    href="mailto:kavyaagrawal58@gmail.com"
-                                    title="Email"
-                                >
-                                    <span class="icon"
-                                        ><i class="fas fa-envelope"></i
-                                    ></span>
-                                </a>
-                                <a
-                                    class="button is-text"
-                                    href="https://www.linkedin.com/in/kavya-agrawal02/"
-                                    target="_blank"
-                                    title="LinkedIn"
-                                >
-                                    <span class="icon"
-                                        ><i class="fab fa-linkedin"></i
-                                    ></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section class="section" id="research" aria-labelledby="research-title">
+      <div class="container section-layout">
+        <aside class="section-rail" aria-label="Section 2">
+          <span class="section-number">02</span>
+          <p>Research &amp; methods</p>
+        </aside>
+        <div data-reveal>
+          <h2 class="section-title" id="research-title">Groundwater research,<br>from evidence to action.</h2>
+          <p class="section-lead">My PhD research integrates environmental observations, Earth observation, geospatial analysis, machine learning, validation, explainability, exposure assessment, and governance.</p>
+
+          <div data-tabs>
+            <div class="tab-list" role="tablist" aria-label="Research streams">
+              <button class="research-tab" id="tab-uranium" type="button" role="tab" aria-selected="true" aria-controls="panel-uranium">Uranium</button>
+              <button class="research-tab" id="tab-fluoride" type="button" role="tab" aria-selected="false" aria-controls="panel-fluoride" tabindex="-1">Fluoride</button>
+              <button class="research-tab" id="tab-arsenic" type="button" role="tab" aria-selected="false" aria-controls="panel-arsenic" tabindex="-1">Arsenic</button>
+              <button class="research-tab" id="tab-downscaling" type="button" role="tab" aria-selected="false" aria-controls="panel-downscaling" tabindex="-1">Spatial downscaling</button>
             </div>
-        </nav>
 
-        <!-- Hero Section -->
-        <section class="section pt-5 pb-2">
-            <div class="container">
-                <div class="columns is-variable is-4 is-vcentered">
-                    <!-- Circular Profile Photo -->
-                    <div
-                        class="column is-one-quarter-tablet is-one-fifth-desktop has-text-centered"
-                    >
-                        <figure
-                            class="image mx-auto mb-4"
-                            style="max-width: 200px"
-                        >
-                            <img
-                                class="is-rounded"
-                                src="./assets/images/home.png"
-                                alt="Kavya Agrawal"
-                                style="
-                                    border: 4px solid #dbdbdb;
-                                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-                                    aspect-ratio: 1/1;
-                                    object-fit: cover;
-                                "
-                            />
-                        </figure>
-                        <!-- Professional Links -->
-                        <div
-                            class="social-links is-flex is-align-items-center is-justify-content-center"
-                            style="gap: 0.75rem"
-                        >
-                            <a
-                                class="has-text-grey-dark"
-                                href="https://scholar.google.com/citations?user=yXQUQ6YAAAAJ&amp;hl=en"
-                                target="_blank"
-                                title="Google Scholar"
-                                style="font-size: 1.5rem"
-                            >
-                                <i class="ai ai-google-scholar"></i>
-                            </a>
-                            <a
-                                class="has-text-grey-dark"
-                                href="https://www.researchgate.net/profile/Kavya-Agrawal-4"
-                                target="_blank"
-                                title="ResearchGate"
-                                style="font-size: 1.5rem"
-                            >
-                                <i class="ai ai-researchgate"></i>
-                            </a>
-                            <a
-                                class="has-text-grey-dark"
-                                href="https://orcid.org/0009-0009-1032-2541"
-                                target="_blank"
-                                title="ORCID"
-                                style="font-size: 1.5rem"
-                            >
-                                <i class="ai ai-orcid"></i>
-                            </a>
-                            <a
-                                class="has-text-grey-dark"
-                                href="https://www.linkedin.com/in/kavya-agrawal02/"
-                                target="_blank"
-                                title="LinkedIn"
-                                style="font-size: 1.5rem"
-                            >
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a
-                                class="has-text-grey-dark"
-                                href="https://github.com"
-                                target="_blank"
-                                title="GitHub"
-                                style="font-size: 1.5rem"
-                            >
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Hero Text -->
-                    <div
-                        class="column is-three-quarters-tablet is-four-fifths-desktop content"
-                    >
-                        <h1 class="title is-1 mb-2">Kavya Agrawal</h1>
-                        <p class="subtitle is-4 mb-3">Ph.D. Scholar</p>
-                        <p class="is-size-5 mb-4">
-                            <strong
-                                >TERI School of Advanced Studies, New Delhi,
-                                India</strong
-                            >
-                        </p>
-                        <p class="is-size-5 mb-4 leading-relaxed">
-                            I am a Ph.D. researcher in Natural & Applied
-                            Sciences. My work combines geospatial science,
-                            artificial intelligence, Earth observation, and
-                            hydro-environmental systems modelling to investigate
-                            groundwater contamination and environmental risk
-                            assessment across India.
-                        </p>
-                        <p
-                            class="is-size-6 mb-5 leading-relaxed"
-                            style="color: var(--body-text-color); opacity: 0.85"
-                        >
-                            My research integrates multi-source Earth
-                            observation datasets with machine learning and deep
-                            learning approaches to model groundwater
-                            contaminants (such as uranium, fluoride, and
-                            arsenic) and estimate human exposure risks across
-                            India. I work extensively with satellite-derived
-                            environmental layers, hydrogeochemical observations,
-                            climatic variables, and land-surface processes to
-                            build predictive and interpretable geospatial
-                            intelligence frameworks.
-                        </p>
-
-                        <!-- Research Metrics Box -->
-                        <div class="research-stats-container mb-5">
-                            <div class="research-stats-grid">
-                                <div class="stat-item">
-                                    <span class="stat-number">7+</span>
-                                    <span class="stat-label"
-                                        >Research Projects</span
-                                    >
-                                </div>
-                                <div class="stat-item">
-                                    <span class="stat-number">20+ Yrs</span>
-                                    <span class="stat-label"
-                                        >LST Trend Data</span
-                                    >
-                                </div>
-                                <div class="stat-item">
-                                    <span class="stat-number">1.2M+</span>
-                                    <span class="stat-label"
-                                        >People Evaluated</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Hero Buttons -->
-                        <div class="buttons mb-4">
-                            <a class="button is-dark" href="./cv.html">
-                                <span class="icon"
-                                    ><i class="fas fa-file-pdf"></i
-                                ></span>
-                                <span>Download CV</span>
-                            </a>
-                            <a
-                                class="button is-light"
-                                href="./publications.html"
-                            >
-                                <span class="icon"
-                                    ><i class="fas fa-book-open"></i
-                                ></span>
-                                <span>Publications</span>
-                            </a>
-                            <a class="button is-light" href="./contact.html">
-                                <span class="icon"
-                                    ><i class="fas fa-envelope"></i
-                                ></span>
-                                <span>Contact</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="tab-panel" id="panel-uranium" role="tabpanel" aria-labelledby="tab-uranium">
+              <h3>National-scale uranium assessment</h3>
+              <p>Multi-source environmental predictors are used to model contamination probability, identify transition and risk zones, assess population exposure, and evaluate whether monitoring aligns with need.</p>
+              <div class="proof-grid" aria-label="Uranium research dataset">
+                <div class="proof"><strong>16,756</strong><span>monitoring locations</span></div>
+                <div class="proof"><strong>494</strong><span>independent validation samples</span></div>
+                <div class="proof"><strong>57</strong><span>environmental predictors</span></div>
+              </div>
             </div>
-        </section>
 
-        <!-- Main Content Section -->
-        <section class="section is-shaded py-5">
-            <div class="container">
-                <!-- Featured Research -->
-                <h2 class="title is-3 mb-5 has-text-centered-mobile">
-                    Featured Research
-                </h2>
-                <div class="columns is-variable is-4">
-                    <!-- Card 1 -->
-                    <div class="column is-one-third">
-                        <div
-                            class="box p-5 height-100"
-                            style="
-                                display: flex;
-                                flex-direction: column;
-                                height: 100%;
-                            "
-                        >
-                            <h3 class="title is-4 mb-3">
-                                Groundwater Contamination
-                            </h3>
-                            <p class="is-size-6 mb-4" style="flex-grow: 1">
-                                Applying AI and machine learning techniques to
-                                map groundwater contaminants like uranium,
-                                fluoride, and arsenic across India, predicting
-                                high-risk hotspots.
-                            </p>
-                            <a
-                                href="./research.html#theme1"
-                                class="has-text-link font-weight-500"
-                            >
-                                <span>Explore</span>
-                                <span class="icon"
-                                    ><i class="fas fa-arrow-right"></i
-                                ></span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="column is-one-third">
-                        <div
-                            class="box p-5 height-100"
-                            style="
-                                display: flex;
-                                flex-direction: column;
-                                height: 100%;
-                            "
-                        >
-                            <h3 class="title is-4 mb-3">Geospatial AI & ML</h3>
-                            <p class="is-size-6 mb-4" style="flex-grow: 1">
-                                Integrating multi-source Earth observation with
-                                deep learning to build predictive and
-                                interpretable geospatial frameworks for
-                                environmental assessment.
-                            </p>
-                            <a
-                                href="./research.html#theme2"
-                                class="has-text-link font-weight-500"
-                            >
-                                <span>Explore</span>
-                                <span class="icon"
-                                    ><i class="fas fa-arrow-right"></i
-                                ></span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="column is-one-third">
-                        <div
-                            class="box p-5 height-100"
-                            style="
-                                display: flex;
-                                flex-direction: column;
-                                height: 100%;
-                            "
-                        >
-                            <h3 class="title is-4 mb-3">
-                                Environmental Health & Policy
-                            </h3>
-                            <p class="is-size-6 mb-4" style="flex-grow: 1">
-                                Quantifying population exposure risks and
-                                translating spatial metrics into policy
-                                recommendations for resilient water security and
-                                environmental governance.
-                            </p>
-                            <a
-                                href="./research.html#theme3"
-                                class="has-text-link font-weight-500"
-                            >
-                                <span>Explore</span>
-                                <span class="icon"
-                                    ><i class="fas fa-arrow-right"></i
-                                ></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="tab-panel" id="panel-fluoride" role="tabpanel" aria-labelledby="tab-fluoride" hidden>
+              <h3>Fluoride spatial modelling</h3>
+              <p>The fluoride stream brings together data cleaning, spatial uniqueness checks, multi-resolution resampling and comparative modelling. Of 72,024 original records, 28,185 are spatially unique; 26,718 contain values and 1,467 are missing.</p>
+              <div class="proof-grid" aria-label="Fluoride research dataset">
+                <div class="proof"><strong>72,024</strong><span>original records</span></div>
+                <div class="proof"><strong>28,185</strong><span>spatially unique records</span></div>
+                <div class="proof"><strong>26,718</strong><span>records with values</span></div>
+              </div>
             </div>
-        </section>
 
-        <!-- Side-by-side section for News, Publications and Interests -->
-        <section class="section py-5">
-            <div class="container">
-                <div class="columns is-variable is-8">
-                    <!-- Left Main Area (News & Latest Publication) -->
-                    <div class="column is-two-thirds content">
-                        <!-- Latest Publication -->
-                        <div class="mb-6">
-                            <h2 class="title is-3 mb-4">Latest Publication</h2>
-                            <div class="box is-shadowless p-5">
-                                <p class="is-size-5 mb-2">
-                                    <strong
-                                        >Evaluating spatial and elevation-wise
-                                        daytime/nighttime LST trends across the
-                                        Indus River Basin</strong
-                                    >
-                                </p>
-                                <p class="is-size-6 mb-2">
-                                    Suraj Mal, <strong>Kavya Agrawal</strong>,
-                                    Shweta Rani, et al.
-                                </p>
-                                <p class="is-size-6 has-text-grey-dark mb-4">
-                                    <em>Journal of Mountain Science</em> (2023)
-                                    20: 3154–3172.
-                                </p>
-                                <div class="buttons">
-                                    <a
-                                        class="button is-small is-dark"
-                                        href="https://doi.org/10.1007/s11629-023-8157-8"
-                                        target="_blank"
-                                    >
-                                        <span class="icon mr-1"
-                                            ><i
-                                                class="fas fa-external-link-alt"
-                                            ></i
-                                        ></span>
-                                        <span>Springer Link (DOI)</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Recent News -->
-                        <div>
-                            <h2 class="title is-3 mb-4">Recent News</h2>
-                            <div class="media">
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong>New Publication</strong>
-                                            <small class="has-text-grey"
-                                                >| Nov 2023</small
-                                            ><br />
-                                            Our research paper evaluating
-                                            Daytime and Nighttime LST trends
-                                            across the Indus River Basin was
-                                            published in the
-                                            <em>Journal of Mountain Science</em
-                                            >.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong>Fellowship Received</strong>
-                                            <small class="has-text-grey"
-                                                >| Oct 2023</small
-                                            ><br />
-                                            Awarded the Ph.D. Fellowship to
-                                            pursue research in Natural & Applied
-                                            Sciences at the TERI School of
-                                            Advanced Studies.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong
-                                                >Conference Presentation</strong
-                                            >
-                                            <small class="has-text-grey"
-                                                >| Sep 2023</small
-                                            ><br />
-                                            Presented permafrost mapping
-                                            methodologies at the High Mountain
-                                            Asia Symposia, highlighting GEE
-                                            automation scripts.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Sidebar (Interests & Contacts) -->
-                    <div class="column is-one-third content">
-                        <!-- Research Interests -->
-                        <div class="mb-6">
-                            <h3 class="title is-4 mb-3">Research Interests</h3>
-                            <div class="tags">
-                                <span class="tag"
-                                    >Groundwater contamination</span
-                                >
-                                <span class="tag">Remote sensing</span>
-                                <span class="tag">GIS</span>
-                                <span class="tag">Machine learning</span>
-                                <span class="tag">Deep learning</span>
-                                <span class="tag">Environmental health</span>
-                                <span class="tag">Exposure assessment</span>
-                                <span class="tag">Climate and hydrology</span>
-                                <span class="tag">Cryosphere studies</span>
-                                <span class="tag">Environmental policy</span>
-                            </div>
-                        </div>
-
-                        <!-- Contact Summary -->
-                        <div class="box is-shadowless p-5">
-                            <h3 class="title is-4 mb-3">Contact</h3>
-                            <p class="is-size-6 mb-2">
-                                <strong>Email:</strong><br />
-                                <a href="mailto:kavya.agrawal@terisas.ac.in"
-                                    >kavya.agrawal@terisas.ac.in</a
-                                ><br />
-                                <a href="mailto:kavyaagrawal58@gmail.com"
-                                    >kavyaagrawal58@gmail.com</a
-                                >
-                            </p>
-                            <p class="is-size-6 mb-3">
-                                <strong>Office:</strong><br />
-                                Department of Natural & Applied Sciences,<br />
-                                TERI School of Advanced Studies,<br />
-                                Vasant Kunj, New Delhi (110070), India
-                            </p>
-                            <a
-                                href="./contact.html"
-                                class="button is-small is-dark is-fullwidth"
-                            >
-                                <span>View Contact Details</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="tab-panel" id="panel-arsenic" role="tabpanel" aria-labelledby="tab-arsenic" hidden>
+              <h3>Arsenic modelling and explainability</h3>
+              <p>This developing stream examines temporal transferability, robustness, nonlinear relationships and the use of explainable AI. Particular care is given to temporal mismatch and whether model explanations remain stable beyond a single split.</p>
             </div>
-        </section>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container content has-text-centered is-size-7">
-                <p>&copy; 2026 Kavya Agrawal. All rights reserved.</p>
-                <div class="mt-2">
-                    <a
-                        href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-                        target="_blank"
-                        class="mx-1"
-                    >
-                        <i class="fab fa-creative-commons fa-lg"></i>
-                        <i class="fab fa-creative-commons-by fa-lg"></i>
-                        <i class="fab fa-creative-commons-nc fa-lg"></i>
-                        <i class="fab fa-creative-commons-sa fa-lg"></i>
-                    </a>
-                </div>
+            <div class="tab-panel" id="panel-downscaling" role="tabpanel" aria-labelledby="tab-downscaling" hidden>
+              <h3>Multi-resolution spatial downscaling</h3>
+              <p>A Punjab pilot uses CHIRPS rainfall from 2013–2022 and predictor datasets ranging from 25 km to 500 m. Outputs at 5 km, 1 km and 500 m are evaluated through spatial structure, aggregation, Moran’s I and semivariogram behaviour.</p>
             </div>
-        </footer>
-    </body>
+          </div>
+
+          <div class="process-band" aria-label="Research workflow">
+            <span>Observations</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h13m-5-5 5 5-5 5"/></svg>
+            <span>Multi-source data</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h13m-5-5 5 5-5 5"/></svg>
+            <span>Spatial modelling</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h13m-5-5 5 5-5 5"/></svg>
+            <span>Validation</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h13m-5-5 5 5-5 5"/></svg>
+            <span>Explainability</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h13m-5-5 5 5-5 5"/></svg>
+            <span>Exposure</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h13m-5-5 5 5-5 5"/></svg>
+            <span>Governance</span>
+          </div>
+
+          <div class="methods-grid" aria-label="Research methods">
+            <div class="method-column">
+              <h4>Earth observation &amp; GIS</h4>
+              <ul><li>Google Earth Engine</li><li>Remote sensing</li><li>Spatial databases</li><li>Multi-resolution analysis</li></ul>
+            </div>
+            <div class="method-column">
+              <h4>AI, ML &amp; validation</h4>
+              <ul><li>Random Forest</li><li>AutoML / AutoGluon</li><li>Deep learning</li><li>Feature importance</li><li>SHAP / LIME</li></ul>
+            </div>
+            <div class="method-column">
+              <h4>Environmental data</h4>
+              <ul><li>MODIS, CHIRPS &amp; ERA5-Land</li><li>GLDAS &amp; GRACE</li><li>JRC Surface Water &amp; GHSL</li><li>OpenLandMap &amp; SRTM</li></ul>
+            </div>
+          </div>
+          <div class="button-row"><a class="text-link" href="research.html" data-arrow-link>Explore the full research framework</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-blush" id="work" aria-labelledby="work-title">
+      <div class="container section-layout">
+        <aside class="section-rail" aria-label="Section 3">
+          <span class="section-number">03</span>
+          <p>Selected work</p>
+        </aside>
+        <div data-reveal>
+          <h2 class="section-title" id="work-title">Selected research,<br>clearly framed.</h2>
+          <p class="section-lead">Published work is separated from ongoing PhD research so that methods, status, and evidence remain transparent.</p>
+
+          <article class="feature-publication">
+            <div class="science-triptych" aria-label="Figures from published Indus Basin land surface temperature research">
+              <div class="science-frame"><img src="assets/images/lst-trends.png" width="783" height="600" alt="Violin plots of seasonal daytime and nighttime land surface temperature trends"></div>
+              <div class="science-frame"><img src="assets/images/lst-seasonal.png" width="902" height="1275" alt="Seasonal daytime, nighttime and mean land surface temperature maps"></div>
+              <div class="science-frame"><img src="assets/images/indus-study-area.png" width="1022" height="739" alt="Indus River Basin elevation and study-area map"></div>
+            </div>
+            <div class="feature-copy">
+              <p class="publication-label">Peer-reviewed · 2023</p>
+              <h3>Evaluating spatial and elevation-wise daytime/nighttime LST trends across the Indus River Basin</h3>
+              <p class="citation">Mal, S., Agrawal, K., Rani, S. et al. · <em>Journal of Mountain Science</em> 20, 3154–3172</p>
+              <a class="button" href="https://doi.org/10.1007/s11629-023-8157-8" target="_blank" rel="noopener noreferrer">View publication</a>
+              <p class="doi">DOI: 10.1007/s11629-023-8157-8</p>
+            </div>
+          </article>
+
+          <div class="project-list" aria-label="Current projects">
+            <article class="project-row"><span class="project-index">01</span><h3>Uranium contamination assessment</h3><p>National-scale probability modelling, independent validation, exposure and monitoring adequacy.</p><span class="status">In progress</span></article>
+            <article class="project-row"><span class="project-index">02</span><h3>Fluoride spatial modelling</h3><p>28,185 spatially unique records; multi-resolution modelling and deep-learning investigation.</p><span class="status">In progress</span></article>
+            <article class="project-row"><span class="project-index">03</span><h3>Arsenic modelling</h3><p>Temporal transferability, robustness, nonlinear interpretation and explainable AI.</p><span class="status status-developing">Developing</span></article>
+            <article class="project-row"><span class="project-index">04</span><h3>Spatial downscaling</h3><p>Punjab pilot across 5 km, 1 km and 500 m outputs with spatial-structure validation.</p><span class="status status-method">Methodological study</span></article>
+          </div>
+          <div class="button-row"><a class="text-link" href="projects.html" data-arrow-link>View all projects and academic work</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="impact" aria-labelledby="impact-title">
+      <div class="container section-layout">
+        <aside class="section-rail" aria-label="Section 4">
+          <span class="section-number">04</span>
+          <p>Impact &amp; governance</p>
+        </aside>
+        <div data-reveal>
+          <h2 class="section-title" id="impact-title">Where prediction meets<br>people and policy.</h2>
+          <p class="section-lead">Contamination probability becomes more useful when it is connected to population exposure, settlement transition, monitoring adequacy, and governance priority.</p>
+          <div class="impact-proof">
+            <div class="proof-grid">
+              <div class="proof"><strong>1.114 billion</strong><span>population assessed</span></div>
+              <div class="proof"><strong>281.13 million</strong><span>at or above 0.38 screening probability</span></div>
+              <div class="proof"><strong>94.2 million</strong><span>at the 0.61 Youden-optimal threshold</span></div>
+            </div>
+            <p class="caveat">These are population-screening estimates within a broader exposure and governance framework—not standalone clinical health-risk estimates.</p>
+          </div>
+          <div class="impact-lower">
+            <div class="decision-path" aria-label="Decision pathway">
+              <div class="decision-item"><span class="decision-number">01</span><span class="decision-label">Contamination probability</span><span class="decision-verb">model</span></div>
+              <div class="decision-item"><span class="decision-number">02</span><span class="decision-label">Population exposure</span><span class="decision-verb">expose</span></div>
+              <div class="decision-item"><span class="decision-number">03</span><span class="decision-label">Transition and built fraction</span><span class="decision-verb">transition</span></div>
+              <div class="decision-item"><span class="decision-number">04</span><span class="decision-label">Monitoring density, distance and coverage</span><span class="decision-verb">monitor</span></div>
+              <div class="decision-item"><span class="decision-number">05</span><span class="decision-label">Governance priority</span><span class="decision-verb">prioritise</span></div>
+            </div>
+            <aside class="governance-panel">
+              <h3>Governance framework</h3>
+              <ul class="index-list">
+                <li><strong>MEI</strong> Monitoring Equity Index</li>
+                <li><strong>GBSI</strong> Groundwater Burden Severity Index</li>
+                <li><strong>EII</strong> Exposure Inequality Index</li>
+                <li><strong>TSI</strong> Transition Stress Index</li>
+              </ul>
+              <div class="governance-callout"><strong>Composite Governance Priority</strong><span>Connecting observed severity, exposure, transition and monitoring adequacy.</span></div>
+            </aside>
+          </div>
+          <div class="button-row"><a class="text-link" href="impact.html" data-arrow-link>Understand the impact framework</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-peach" id="experience" aria-labelledby="experience-title">
+      <div class="container section-layout">
+        <aside class="section-rail" aria-label="Section 5">
+          <span class="section-number">05</span>
+          <p>Experience, teaching &amp; engagement</p>
+        </aside>
+        <div data-reveal>
+          <h2 class="section-title" id="experience-title">Learning, teaching,<br>and working in the field.</h2>
+          <p class="section-lead">Research practice shaped by teaching, field engagement, sustainability programmes, and science–policy dialogue.</p>
+          <div class="timeline">
+            <article class="timeline-item"><time class="timeline-year" datetime="2026-04">2026</time><span class="timeline-dot"></span><div class="timeline-copy"><h3>Best Paper Award</h3><p>ICSSR EHP NEXUS 2026 · Gautam Buddha University · 27–28 April</p></div></article>
+            <article class="timeline-item"><time class="timeline-year" datetime="2026-03">2026</time><span class="timeline-dot"></span><div class="timeline-copy"><h3>NRSC / ISRO Training Programme</h3><p>Volunteer and Rapporteur · 16–20 March</p></div></article>
+            <article class="timeline-item"><time class="timeline-year" datetime="2026">2026</time><span class="timeline-dot"></span><div class="timeline-copy"><h3>Programme LEAD</h3><p>Facilitator and Judge · sustainable city design challenge for Classes 9–12</p></div></article>
+            <article class="timeline-item"><time class="timeline-year" datetime="2026-02">2026</time><span class="timeline-dot"></span><div class="timeline-copy"><h3>WSDS and Water as a Commons</h3><p>World Sustainable Development Summit and water-governance working group · 25–27 February</p></div></article>
+            <article class="timeline-item"><time class="timeline-year" datetime="2025">2025</time><span class="timeline-dot"></span><div class="timeline-copy"><h3>MSc Geoinformatics teaching</h3><p>Principles of Remote Sensing · 32 practical learning hours</p></div></article>
+            <article class="timeline-item"><time class="timeline-year" datetime="2024-10">2024</time><span class="timeline-dot"></span><div class="timeline-copy"><h3>As2024 conference presentation</h3><p>Arsenic in the Environment · KIIT, Bhubaneswar · 20–24 October</p></div></article>
+          </div>
+          <div class="education-grid" aria-label="Education">
+            <div class="education-item"><h3>PhD Scholar</h3><p>Natural &amp; Applied Sciences · TERI School of Advanced Studies</p></div>
+            <div class="education-item"><h3>MA Geography</h3><p>Dr B.R. Ambedkar University · 2021–2023</p></div>
+            <div class="education-item"><h3>BA (Honors) Geography</h3><p>University of Delhi · 2018–2021</p></div>
+          </div>
+          <div class="button-row"><a class="text-link" href="experience.html" data-arrow-link>See the full academic and engagement record</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container section-layout">
+        <aside class="section-rail" aria-label="Section 6">
+          <span class="section-number">06</span>
+          <p>CV &amp; contact</p>
+        </aside>
+        <div data-reveal>
+          <h2 class="section-title" id="contact-title">Let’s connect environmental data<br>to public decisions.</h2>
+          <p class="section-lead">I welcome research collaborations, postdoctoral conversations, teaching opportunities, and interdisciplinary work across environmental AI, groundwater quality, Earth observation, and environmental governance.</p>
+          <div class="contact-grid">
+            <div class="contact-column">
+              <p class="eyebrow">Contact</p>
+              <h3>Kavya Agrawal</h3>
+              <p class="contact-role">PhD Scholar · Natural &amp; Applied Sciences</p>
+              <p>TERI School of Advanced Studies, New Delhi</p>
+              <div class="contact-links">
+                <a href="mailto:kavya.agrawal@terisas.ac.in">kavya.agrawal@terisas.ac.in</a>
+                <a href="mailto:kavyaagrawal58@gmail.com">kavyaagrawal58@gmail.com</a>
+              </div>
+              <div class="button-row">
+                <a class="button button-primary" href="mailto:kavya.agrawal@terisas.ac.in">Email Kavya</a>
+                <a class="button" href="output/pdf/Kavya_Agrawal_Academic_CV.pdf" download>Download academic CV</a>
+              </div>
+            </div>
+            <div class="contact-column">
+              <p class="eyebrow">Research profiles</p>
+              <div class="profile-links">
+                <a class="profile-link" href="https://scholar.google.com/citations?user=yXQUQ6YAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" data-arrow-link>Google Scholar</a>
+                <a class="profile-link" href="https://orcid.org/0009-0009-1032-2541" target="_blank" rel="noopener noreferrer" data-arrow-link>ORCID</a>
+                <a class="profile-link" href="https://www.researchgate.net/profile/Kavya-Agrawal-4" target="_blank" rel="noopener noreferrer" data-arrow-link>ResearchGate</a>
+                <a class="profile-link" href="https://www.linkedin.com/in/kavya-agrawal02/" target="_blank" rel="noopener noreferrer" data-arrow-link>LinkedIn</a>
+              </div>
+            </div>
+          </div>
+          <p class="collaboration-note">Open to collaborations in environmental geoinformatics, geospatial AI, hydroinformatics, groundwater research, and science–policy practice.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-site-footer></footer>
+  <script src="assets/js/site.js?v=34" defer></script>
+  <script src="assets/js/pwa.js?v=34" defer></script>
+</body>
 </html>

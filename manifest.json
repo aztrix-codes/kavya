@@ -1,28 +1,15 @@
 {
-  "name": "Kavya Agrawal - Academic Portfolio",
+  "name": "Kavya Agrawal - Environmental Geoinformatics Portfolio",
   "short_name": "Kavya Agrawal",
-  "description": "Ph.D. Scholar Portfolio in Natural & Applied Sciences - TERI School of Advanced Studies",
+  "description": "Research portfolio spanning groundwater contamination, Earth observation, geospatial AI, exposure and environmental governance.",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#121212",
-  "theme_color": "#2A7EFF",
-  "orientation": "portrait-primary",
+  "background_color": "#fffcfa",
+  "theme_color": "#fffcfa",
+  "orientation": "any",
   "icons": [
-    {
-      "src": "./assets/images/icon-192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "./assets/images/icon-512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    },
-    {
-      "src": "./assets/images/icon-512.png",
-      "type": "image/png",
-      "sizes": "512x512",
-      "purpose": "any maskable"
-    }
+    {"src": "./assets/images/icon-192.png", "type": "image/png", "sizes": "192x192"},
+    {"src": "./assets/images/icon-512.png", "type": "image/png", "sizes": "512x512"},
+    {"src": "./assets/images/icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any maskable"}
   ]
 }

@@ -1,97 +1,58 @@
-const CACHE_NAME = 'kavya-portfolio-v16';
-const ASSETS_TO_CACHE = [
+const CACHE_NAME = 'kavya-portfolio-v34';
+const CORE_ASSETS = [
   './',
   './index.html',
   './about.html',
-  './experience.html',
   './research.html',
   './projects.html',
+  './impact.html',
   './publications.html',
+  './experience.html',
   './research-notes.html',
   './cv.html',
   './contact.html',
-  './assets/css/styles.css?v=16',
-  './assets/js/navbar-burger.js',
-  './assets/js/pwa.js',
-  './assets/images/home.png',
-  './assets/images/logo.png',
-  './assets/images/favicon-16.png',
-  './assets/images/favicon-32.png',
-  './assets/images/apple-touch-icon.png',
-  './assets/images/icon-192.png',
-  './assets/images/icon-512.png',
-  'https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css',
-  'https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css',
-  'https://use.fontawesome.com/releases/v6.5.2/js/all.js'
+  './assets/css/styles.css?v=34',
+  './assets/js/site.js?v=34',
+  './assets/js/pwa.js?v=34',
+  './assets/images/contours.svg',
+  './assets/images/kavya-portrait-hero.jpg',
+  './assets/images/kavya-portrait-formal.jpg',
+  './assets/images/lst-trends.png',
+  './assets/images/lst-seasonal.png',
+  './assets/images/indus-study-area.png',
+  './output/pdf/Kavya_Agrawal_Academic_CV.pdf'
 ];
 
-// Install Event - Pre-caching assets
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        console.log('[Service Worker] Pre-caching offline assets...');
-        return cache.addAll(ASSETS_TO_CACHE);
-      })
-      .then(() => self.skipWaiting())
-  );
+self.addEventListener('install', (event) => {
+  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(CORE_ASSETS)).then(() => self.skipWaiting()));
 });
 
-// Activate Event - Clean up old caches
-self.addEventListener('activate', event => {
-  event.waitUntil(
-    caches.keys().then(cacheNames => {
-      return Promise.all(
-        cacheNames.map(cache => {
-          if (cache !== CACHE_NAME) {
-            console.log('[Service Worker] Deleting old cache:', cache);
-            return caches.delete(cache);
-          }
-        })
-      );
-    }).then(() => self.clients.claim())
-  );
+self.addEventListener('activate', (event) => {
+  event.waitUntil(caches.keys().then((names) => Promise.all(names.filter((name) => name !== CACHE_NAME).map((name) => caches.delete(name)))).then(() => self.clients.claim()));
 });
 
-// Fetch Event - Cache First, Network Fallback
-self.addEventListener('fetch', event => {
-  // Only handle GET requests
-  if (event.request.method !== 'GET') return;
-
-  event.respondWith(
-    caches.match(event.request)
-      .then(cachedResponse => {
-        if (cachedResponse) {
-          // Serve from cache, and optionally update cache in background
-          fetch(event.request)
-            .then(networkResponse => {
-              if (networkResponse.status === 200) {
-                caches.open(CACHE_NAME).then(cache => cache.put(event.request, networkResponse));
-              }
-            })
-            .catch(() => { /* ignore background sync errors */ });
-          return cachedResponse;
-        }
-
-        // Fallback to network
-        return fetch(event.request)
-          .then(networkResponse => {
-            if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
-              return networkResponse;
-            }
-            // Cache the newly fetched asset
-            const responseToCache = networkResponse.clone();
-            caches.open(CACHE_NAME).then(cache => {
-              cache.put(event.request, responseToCache);
-            });
-            return networkResponse;
-          })
-          .catch(() => {
-            // Offline fallback for HTML pages
-            if (event.request.headers.get('accept').includes('text/html')) {
-              return caches.match('./index.html');
-            }
-          });
-      })
-  );
+self.addEventListener('fetch', (event) => {
+  if (event.request.method !== 'GET' || new URL(event.request.url).origin !== self.location.origin) return;
+  const requestUrl = new URL(event.request.url);
+  const isCodeAsset = requestUrl.pathname.endsWith('.css') || requestUrl.pathname.endsWith('.js');
+  if (isCodeAsset) {
+    event.respondWith(fetch(event.request).then((response) => {
+      if (response.ok) caches.open(CACHE_NAME).then((cache) => cache.put(event.request, response.clone()));
+      return response;
+    }).catch(() => caches.match(event.request)));
+    return;
+  }
+  const acceptsHtml = event.request.headers.get('accept')?.includes('text/html');
+  if (acceptsHtml) {
+    event.respondWith(fetch(event.request).then((response) => {
+      const copy = response.clone();
+      caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
+      return response;
+    }).catch(() => caches.match(event.request).then((cached) => cached || caches.match('./index.html'))));
+    return;
+  }
+  event.respondWith(caches.match(event.request).then((cached) => cached || fetch(event.request).then((response) => {
+    if (response.ok) caches.open(CACHE_NAME).then((cache) => cache.put(event.request, response.clone()));
+    return response;
+  })));
 });
